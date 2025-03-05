@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="estilosPartesDeTrabajo.css">
+	</head>
+	<body>
+		<div class="partes-de-trabajo">
+		  <div class="body">
+		    <div class="col-3">
+		      <div class="wrapper">
+		        <div class="te-damos-la-bienvenida-a-sm-printer-hub">
+		          Te damos la bienvenida a SMPrinter Hub
+		        </div>
+		        <div class="tabs">
+		          <div class="particles-tab-item">
+		            <div class="icons-home-01">
+		              <img class="elements" src="img/home.svg" />
+		            </div>
+		            <div class="tab-title"><a href="index2.html">Inicio</a></div>
+		          </div>
+		          <div class="particles-tab-item2">
+		            <div class="icons-file-search">
+		              <img class="elements2" src="img/buscadorPartes.svg" />
+		            </div>
+		            <div class="tab-title2">Partes de trabajo</div>
+		          </div>
+		          <div class="particles-tab-item">
+		            <div class="icons-dashboard-square-add">
+		              <img class="elements3" src="img/espaciosTrabajo.svg" />
+		            </div>
+		            <div class="tab-title"><a href="espaciosTrabajo.html">Espacios de trabajo</a></div>
+		          </div>
+		          <div class="particles-tab-item">
+		            <div class="icons-user-multiple">
+		              <img class="elements4" src="img/miembros.svg" />
+		            </div>
+		            <div class="tab-title"><a href="miembros.html">Miembros</a></div>
+		          </div>
+		        </div>
+		        <a href="miembros.html?nuevoParte=true">
+		        <div class="button">
+		          <div class="button-text">Crear nuevo parte</div>
+		          <div class="icons-add-01">
+		            <img class="elements5" src="img/sumar.svg" />
+		          </div>
+		        </div>
+		        </a>
+		      </div>
+		      <div class="wrapper2">
+		        <div class="spacing-block">
+		          <div class="spacer"></div>
+		        </div>
+		        <div class="button2">
+		          <div class="button-text2">Mi cuenta</div>
+		        </div>
+		        <div class="button3">
+		          <div class="button-text2">Cerrar sesión</div>
+		        </div>
+		      </div>
+		    </div>
+		    <div class="col-9">
+		      <div class="frame-2">
+		        <div class="partes-de-trabajo2">Partes de trabajo</div>
+		        <a href="miembros.html?nuevoParte=true">
+		        <div class="buttons-box">
+		          <div class="button4">
+		            <div class="button-text3">Crear nuevo parte</div>
+		            <div class="icons-add-01">
+		              <img class="elements6" src="img/sumar.svg" />
+		            </div>
+		          </div>
+		        </div>
+		        </a>
+		      </div>
+		      <div class="search-nav">
+		        <div class="icons-search">
+		          <img class="elements7" src="img/lupa.svg" />
+		        </div>
+		        <div class="search-placeholder">Busca aquí un parte</div>
+		      </div>
+		      <div class="container">
+		        <div class="frame-4">
+		          <div class="particles-table-filters">
+		            <div class="label">150 partes</div>
+		            <div class="filters">
+		              <div class="dropdown-tag">
+		                <div class="tag">
+		                  <div class="leading-group">
+		                    <div class="leading-icon">
+		                      <div class="icons-user-multiple2">
+		                        <img class="elements8" src="img/miembros.svg" />
+		                      </div>
+		                    </div>
+		                    <select name="tipoClienteFiltrar" id="tipoClienteFiltrar" class="label2">
+		                    	<option value="">Todos los tipos de cliente</option>
+		                    	<option value="Propio">Propio</option>
+		                    	<option value="Comercial">Comercial</option>
+		                    	<option value="Tercero">Tercero</option>
+				  			</select>
+		                  </div>
+		                  <div class="particles-tag-close-button">
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="dropdown-tag">
+		                <div class="tag">
+		                  <div class="leading-group">
+		                    <div class="leading-icon">
+		                      <div class="icons-file-01">
+		                        <img class="elements10" src="img/papel.svg" />
+		                      </div>
+		                    </div>
+		                    <select name="papelFiltrar" id="papelFiltrar" class="label2">
+		                    		<option value="">Todos los papeles</option>
+				                	<option value="Quimico">Quimico</option>
+				                	<option value="Est. brillo 135gr">Est. brillo 135gr</option>
+				                	<option value="Est. brillo 250gr">Est. brillo 250gr</option>
+				                	<option value="Est. brillo 300gr">Est. brillo 300gr</option>
+				                	<option value="Cartulina offset blanco 180gr">Cartulina offset blanco 180gr</option>
+				                	<option value="Cartulina offset blanco 240gr">Cartulina offset blanco 240gr</option>
+				                	<option value="Cartulina offset color">Cartulina offset color</option>
+				                	<option value="Offset blanco 80gr">Offset blanco 80gr</option>
+				                	<option value="Offset color 80gr">Offset color 80gr</option>
+				                	<option value="Offset blanco 90gr">Offset blanco 90gr</option>
+				                	<option value="Sobre americano blanco">Sobre americano blanco</option>
+				  			</select>
+		                  </div>
+		                  <div class="particles-tag-close-button">
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="dropdown-tag">
+		                <div class="tag">
+		                  <div class="leading-group">
+		                    <div class="leading-icon">
+		                      <div class="icons-printer">
+		                        <img class="elements12" src="img/impresion.svg" />
+		                      </div>
+		                    </div>
+		                    <select name="impresionFiltrar" id="tipoClienteFiltrar" class="label2">
+		                    	<option value="">Todas las impresiones</option>
+		                    	<option value="Offset">Offset</option>
+		                    	<option value="Digital">Digital</option>
+				  			</select>
+		                  </div>
+		                  <div class="particles-tag-close-button">
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="dropdown-tag">
+		                <div class="tag">
+		                  <div class="leading-group">
+		                    <div class="leading-icon">
+		                      <div class="icons-paint-bucket">
+		                        <img class="elements14" src="img/tintas.svg" />
+		                      </div>
+		                    </div>
+		                    <select name="tintasFiltrar" id="tintasFiltrar" class="label2">
+		                    		<option value="">Todas las tintas</option>
+				                	<option value="1+0">1+0</option>
+				                	<option value="1+1">1+1</option>
+				                	<option value="2+0">2+0</option>
+				                	<option value="2+1">2+1</option>
+				                	<option value="2+2">2+2</option>
+				                	<option value="3+0">3+0</option>
+				                	<option value="4+0">4+0</option>
+				                	<option value="4+1">4+1</option>
+				                	<option value="4+4">4+4</option>
+				  				</select>
+		                  </div>
+		                  <div class="particles-tag-close-button">
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="dropdown-tag">
+		                <div class="tag">
+		                  <div class="leading-group">
+		                    <div class="leading-icon">
+		                      <div class="icons-picture-in-picture-exit">
+		                        <img class="elements16" src="img/tamanho.svg" />
+		                      </div>
+		                    </div>
+		                    <select name="tamanhoFiltrar" id="tamanhoFiltrar" class="label2">
+		                    		<option value="">Todos los tamaños</option>
+				                	<option value="85x50">85x50</option>
+				                	<option value="A6">A6</option>
+				                	<option value="A5">A5</option>
+				                	<option value="A4">A4</option>
+				                	<option value="A3">A3</option>
+				                	<option value="10x21">10x21</option>
+				                	<option value="21x21">21x21</option>
+				                	<option value="32x45">32x45</option>
+				                	<option value="33x49">33x49</option>
+				                	<option value="11,5x22,5">11,5x22,5</option>
+				  			</select>
+		                  </div>
+		                  <div class="particles-tag-close-button">
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="particles-table-filters2">
+		            <div class="input">
+		              <div class="wrapper3">
+		                <div class="label3">Cliente:</div>
+		                <div class="container2">
+		                  <div class="input-text">Selecciona el cliente</div>
+		                  <div class="particles-trailling-icon">
+		                    <div class="icons-arrow-down-01-sharp2">
+		                      <img class="elements18" src="elements17.svg" />
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="input">
+		              <div class="wrapper3">
+		                <div class="label3">Producto:</div>
+		                <div class="container2">		                  
+		                  <select name="productoFiltrar" id="productoFiltrar" class="input-text">
+						    <option value="">Todos los productos</option>
+						    <option value="Tarjetas">Tarjetas</option>
+						    <option value="Talonarios">Talonarios</option>
+						    <option value="Carteles">Carteles</option>
+						    <option value="Sobre/Bolsa">Sobre/Bolsa</option>
+						    <option value="Cartas">Cartas</option>
+						    <option value="Carpetas">Carpetas</option>
+						    <option value="Folletos">Folletos</option>
+						    <option value="Cuadernos">Cuadernos</option>
+						    <option value="Pegatinas">Pegatinas</option>
+						    <option value="Rifa">Rifa</option>
+						    <option value="Entradas">Entradas</option>
+						    <option value="Invitaciones">Invitaciones</option>
+						</select>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="input">
+		              <div class="wrapper3">
+		                <div class="label3">Ordenar por:</div>
+		                <div class="container2">		                  
+		                  <select name="ordenarPor" id="ordenarPor" class="input-text2">
+				                	<option value="fecha">Fecha de creación</option>
+				                	<option value="id">Serial</option>
+				                	<option value="total">Precio</option>
+				  			</select>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        <div class="card-horizontal-list" id="containerPartes">
+		          
+		        </div>
+		        <div class="pagination">
+		          <div class="leading-item">
+		            <div class="button5" id="prevPage">
+		              <div class="icons-arrow-left-01-sharp">
+		                <img class="elements25" src="img/anterior.svg" />
+		              </div>
+		            </div>
+		          </div>
+		          <div class="middle-item">
+		            <div class="prefix">Página</div>
+		            <div class="input">
+		              <div class="container5">
+		                <div class="input-text3" id="currentPage">1</div>
+		              </div>
+		            </div>
+		            <div class="separator">/</div>
+		            <div class="sufix" id="totalPages">9</div>
+		          </div>
+		          <div class="trailing-item">
+		            <div class="button6" id="nextPage">
+		              <div class="icons-arrow-right-01-sharp">
+		                <img class="elements26" src="img/siguiente.svg" />
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <dialog id="dialog1">
+			<div class="modal">
+			  <div class="headerModal">
+			    <div class="label-titleModal">
+			      <div class="titleModal">Eliminar parte</div>
+			    </div>
+			  </div>
+			  <div class="icons-cancel-01Modal" id="salirModal">
+			    <img class="elementsModal" src="img/cruz.svg" />
+			  </div>
+			  <div class="bodyModal">
+			    <div class="descriptionModal">¿Seguro que quiere eliminar el parte?</div>
+			  </div>
+			  <div class="button-boxModal">
+			    <div class="cancel-buttonModal" id="quitarModal">
+			      <div class="button-textModal">Cancelar</div>
+			    </div>
+			    <div class="buttonModal">
+			      <div class="button-text2Modal">Eliminar</div>
+			      <div class="icons-delete-02Modal">
+			        <img class="elements2Modal" src="img/borrar.svg" />
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</dialog>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', (event) => {
+			    cargarPartes();
+			    
+			    document.getElementById('prevPage').addEventListener('click', () => {
+			        if (currentPage > 1) {
+			            currentPage--;
+			            cargarPartes();
+			        }
+			    });
+			
+			    document.getElementById('nextPage').addEventListener('click', () => {
+			        if (currentPage < totalPages) {
+			            currentPage++;
+			            cargarPartes();
+			        }
+			    });
+			
+			    document.getElementById('productoFiltrar').addEventListener('change', () => {
+			        currentPage = 1;
+			        cargarPartes();
+			    });
+			});
+			
+			let currentPage = 1;
+			const itemsPerPage = 16;
+			let totalPages = 1;
+			
+			function cargarPartes() {
+			    const productoFiltrar = document.getElementById('productoFiltrar').value;
+			    const xhr = new XMLHttpRequest();
+			    xhr.onreadystatechange = function () {
+			        if (xhr.readyState === XMLHttpRequest.DONE) {
+			            if (xhr.status === 200) {
+			                document.getElementById('containerPartes').innerHTML = xhr.responseText;
+			
+			                const paginationInfo = document.getElementById('pagination-info');
+			                if (paginationInfo) {
+			                    totalPages = parseInt(paginationInfo.getAttribute('data-total-pages'), 10);
+			                    document.getElementById('currentPage').innerText = currentPage;
+			                    document.getElementById('totalPages').innerText = totalPages;
+			                }
+			
+			                document.getElementById('prevPage').style.display = currentPage === 1 ? 'none' : 'block';
+			                document.getElementById('nextPage').style.display = currentPage === totalPages ? 'none' : 'block';
+			            } else {
+			                console.error("Error al cargar los partes.");
+			            }
+			        }
+			    };
+			    xhr.open("GET", `imprimePartes?page=${currentPage}&itemsPerPage=${itemsPerPage}&productoFiltrar=${encodeURIComponent(productoFiltrar)}`, true);
+			    xhr.send();
+			}
+
+			function duplicarParte(id) {
+			    if (confirm("¿Estás seguro que deseas duplicar este parte?")) {
+			        const xhr = new XMLHttpRequest();
+			        xhr.onreadystatechange = function () {
+			            if (xhr.readyState === XMLHttpRequest.DONE) {
+			                if (xhr.status === 200) {
+			                    window.location.href = "partesDeTrabajo.html";
+			                } else {
+			                    console.error("Error al duplicar el parte.");
+			                }
+			            }
+			        };
+			        xhr.open("GET", `duplicarParte?id=${id}`, true);
+			        xhr.send();
+			    }
+			}
+			
+			function eliminarParte(id) {
+			    if (confirm("¿Estás seguro que deseas eliminar este parte?")) {
+			        const xhr = new XMLHttpRequest();
+			        xhr.onreadystatechange = function () {
+			            if (xhr.readyState === XMLHttpRequest.DONE) {
+			                if (xhr.status === 200) {
+			                    window.location.href = "partesDeTrabajo.html";
+			                } else {
+			                    console.error("Error al eliminar el parte.");
+			                }
+			            }
+			        };
+			        xhr.open("POST", `eliminaPartes?id=${id}`, true);
+			        xhr.send();
+			    }
+			}
+			
+			function imprimeParte(id) {
+			    if (confirm("¿Estás seguro que deseas imprimir este parte?")) {
+			        const xhr = new XMLHttpRequest();
+			        xhr.onreadystatechange = function () {
+			            if (xhr.readyState === XMLHttpRequest.DONE) {
+			                if (xhr.status === 200) {
+			                	window.location.href = "imprimeParte?id=${id}";
+			                } else {
+			                    console.error("Error al imprimir el parte.");
+			                }
+			            }
+			        };
+			        xhr.open("POST", `imprimeParte?id=${id}`, true);
+			        xhr.send();
+			    }
+			}
+			
+			document.getElementById('salirModal').addEventListener('click', function(){
+		        dialog1.open = false;
+		    });
+			
+			document.getElementById('quitarModal').addEventListener('click', function(){
+		        dialog1.open = false;
+		    });
+		</script>
+	</body>
+</html>

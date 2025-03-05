@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="estilosEspaciosTrabajo.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.10.2/Sortable.min.js"></script>
+</head>
+<body>
+	<div class="espacios-de-trabajo">
+  <div class="body">
+    <div class="col-3">
+      <div class="wrapper">
+        <div class="te-damos-la-bienvenida-a-sm-printer-hub">
+          Te damos la bienvenida a SMPrinter Hub
+        </div>
+        <div class="tabs">
+          <div class="particles-tab-item">	
+            <div class="icons-home-01">
+              <img class="elements" src="img/home.svg" />
+            </div>
+            <div class="tab-title"><a href="index2.html">Inicio</a></div>
+          </div>
+          <div class="particles-tab-item">
+            <div class="icons-file-search">
+              <img class="elements2" src="img/buscadorPartes.svg" />
+            </div>
+            <div class="tab-title"><a href="partesDeTrabajo.html">Partes de trabajo</a></div>
+          </div>
+          <div class="particles-tab-item2">
+            <div class="icons-dashboard-square-add">
+              <img class="elements3" src="img/espaciosTrabajo.svg" />
+            </div>
+            <div class="tab-title2">Espacios de trabajo</div>
+          </div>
+          <div class="particles-tab-item">
+            <div class="icons-user-multiple">
+              <img class="elements4" src="img/miembros.svg" />
+            </div>
+            <div class="tab-title"><a href="miembros.html">Miembros</a></div>
+          </div>
+        </div>
+        <a href="miembros.html?nuevoParte=true">
+        <div class="button">
+          <div class="button-text">Crear nuevo parte</div>
+          <div class="icons-add-01">
+            <img class="elements5" src="img/sumar.svg" />
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="wrapper2">
+        <div class="spacing-block">
+          <div class="spacer"></div>
+        </div>
+        <div class="button2">
+          <div class="button-text2">Mi cuenta</div>
+        </div>
+        <div class="button3">
+          <div class="button-text2">Cerrar sesión</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="frame-2">
+        <div class="espacios-de-trabajo2">Espacios de trabajo</div>
+        <div class="buttons-box" id="abrirDialog">
+          <div class="button4">
+            <div class="button-text3">Crear nuevo espacio</div>
+            <div class="icons-add-01">
+              <img class="elements6" src="img/sumar.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-115">
+        <div class="empty-state">
+          <div class="frame-1">
+            <div class="text">Partes abiertos</div>
+          </div>
+        </div>
+        <div class="empty-state2">
+          <div class="icons-file-01">
+            <img class="elements7" src="img/papel.svg" />
+          </div>
+          <div class="text2">Arrastra aquí para archivar el parte</div>
+          <div class="button2">
+            <div class="button-text4">Ver partes archivados</div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-117">
+        
+      </div>
+    </div>
+  </div>
+  <dialog id="dialog1">
+  	<form method="post" action="crearAgrupacion">
+		<div class="modal">
+		  <div class="headerModal">
+		    <div class="label-titleModal">
+		      <div class="crear-espacioModal">Crear espacio</div>
+		    </div>
+		  </div>
+		  <div class="icons-cancel-01Modal" id="quitarModal">
+		    <img class="elementsModal" src="img/cruz.svg" />
+		  </div>
+		  <div class="bodyModal">
+		    <div class="inputs-groupModal">
+		      <div class="rowModal">
+		        <div class="inputModal">
+		          <div class="labelModal">Nombre</div>
+		          <div class="containerModal">
+		            <input type="text" class="input-textModal" name="nombreAgrupacion" placeholder="Indica el nombre del espacio">
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="button-boxModal">
+		    <div class="cancel-buttonModal" id="salirModal">
+		      <div class="button-textModal">Cancelar</div>
+		    </div>
+		    <div class="primary-buttonModal">
+		      <button type="submit" class="button-text2Modal">Añadir</button>
+		      <div class="icons-add-01Modal">
+		        <img class="elements2Modal" src="img/sumar.svg" />
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</form>
+</dialog>
+<dialog id="dialog2">
+	<form id="renombrarForm" method="post" action="editarAgrupacion">
+	<div class="modal2">
+	  <div class="headerModal2">
+	    <div class="label-titleModal2">
+	      <div class="renombrar-espacioModal2">Renombrar espacio</div>
+	    </div>
+	  </div>
+	  <div class="icons-cancel-01Modal2" id="quitarModal2">
+	    <img class="elementsModal2" src="img/cruz.svg" />
+	  </div>
+	  <div class="bodyModal2">
+	    <div class="inputs-groupModal2">
+	      <div class="rowModal2">
+	        <div class="inputModal2">
+	          <div class="labelModal2">Nombre</div>
+	          <div class="containerModal2">
+	            <input type="text" name="nuevoNombre" class="input-textModal2">
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="button-boxModal2">
+	    <div class="cancel-buttonModal2" id="salirModal2">
+	      <div class="button-textModal2">Cancelar</div>
+	    </div>
+	    <div class="primary-buttonModal2">
+	      <button type="submit" class="button-text2Modal2" id="guardarCambiosBtn">Guardar cambios</button>
+	      <div class="icons-add-01Modal2">
+	        <img class="elements2Modal2" src="img/sumar.svg" />
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	</form>
+</dialog>
+</div>
+<script>
+        window.onload = function() {
+            cargarPartesAbiertos();
+            cargarAgrupaciones();
+
+            document.getElementById('salirModal').addEventListener('click', function(){
+                dialog1.open = false;
+            });
+
+            document.getElementById('quitarModal').addEventListener('click', function(){
+                dialog1.open = false;
+            });
+
+            document.getElementById('salirModal2').addEventListener('click', function(){
+                dialog2.open = false;
+            });
+
+            document.getElementById('quitarModal2').addEventListener('click', function(){
+                dialog2.open = false;
+            });
+
+            document.getElementById('abrirDialog').addEventListener('click', function(){
+                dialog1.open = true;
+            });
+        };
+
+        function abrirDialogoRenombrar(element) {
+            var agrupacionElement = element.closest('.empty-state3');
+            var nombreAgrupacion = agrupacionElement.querySelector('.frame-12 .text3').innerText;
+            var agrupacionId = agrupacionElement.dataset.id;
+
+            document.querySelector('input[name="nuevoNombre"]').value = nombreAgrupacion;
+
+            dialog2.open = true;
+
+            document.getElementById('guardarCambiosBtn').addEventListener('click', function(event) {
+                event.preventDefault();
+
+                var nuevoNombre = document.querySelector('input[name="nuevoNombre"]').value;
+                var agrupacionId = element.closest('.empty-state3').dataset.id;
+
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "editarAgrupacion", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        console.log(xhr.responseText);
+                        location.reload();
+                    } else {
+                        console.error("Error al renombrar la agrupación. Estado: " + xhr.status);
+                    }
+                };
+                xhr.onerror = function() {
+                    console.error("Error de red al renombrar la agrupación");
+                };
+                xhr.send("nuevoNombre=" + encodeURIComponent(nuevoNombre) + "&agrupacionId=" + encodeURIComponent(agrupacionId));
+            });
+        }
+
+        function eliminarAgrupacion(element) {
+            var confirmacion = confirm("¿Estás seguro de que quieres eliminar esta agrupación?");
+            if (confirmacion) {
+                var agrupacionId = element.closest('.empty-state3').dataset.id;
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "eliminarAgrupacion?id=" + agrupacionId, true);
+                xhr.onload = function() {
+                    if (xhr.status == 200) {
+                        var agrupacionElement = element.closest('.empty-state3');
+                        agrupacionElement.parentNode.removeChild(agrupacionElement);
+                    } else {
+                        console.error("Error al eliminar la agrupación");
+                    }
+                };
+                xhr.send();
+            }
+        }
+
+        function cargarPartesAbiertos() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "cargarPartesAbiertos", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    var partesHTML = xhr.responseText;
+                    var tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = partesHTML;
+
+                    var partesContainer = document.querySelector(".empty-state .partes-container");
+                    var sinAgrupacionContainer = document.querySelector(".empty-state .sin-agrupacion-container");
+
+                    if (!sinAgrupacionContainer) {
+                        sinAgrupacionContainer = document.createElement("div");
+                        sinAgrupacionContainer.className = "sin-agrupacion-container";
+                        document.querySelector(".empty-state").appendChild(sinAgrupacionContainer);
+                    }
+
+                    while (tempDiv.firstChild) {
+                        var parteElement = tempDiv.firstChild;
+                        parteElement.setAttribute("draggable", "true");
+                        parteElement.addEventListener("dragstart", function(event) {
+                            event.dataTransfer.setData("text/plain", event.target.dataset.id);
+                        });
+
+                        var agrupacionId = parteElement.getAttribute('data-agrupacion-id');
+                        if (agrupacionId) {
+                            var agrupacionContainer = document.querySelector(".empty-state3[data-id='" + agrupacionId + "']");
+                            if (agrupacionContainer) {
+                                agrupacionContainer.appendChild(parteElement);
+                            }
+                        } else {
+                            sinAgrupacionContainer.appendChild(parteElement);
+                        }
+                    }
+                }
+            };
+            xhr.send();
+
+            var dropZone = document.querySelector(".empty-state2");
+            dropZone.addEventListener("dragover", function(event) {
+                event.preventDefault();
+            });
+            dropZone.addEventListener("drop", function(event) {
+                event.preventDefault();
+                var id = event.dataTransfer.getData("text/plain");
+                cerrarParte(id);
+            });
+        }
+
+
+        function cargarAgrupaciones() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "cargarAgrupacion", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    var agrupacionesHTML = xhr.responseText;
+                    var frame117Div = document.querySelector(".frame-117");
+
+                    var tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = agrupacionesHTML;
+
+                    while (tempDiv.firstChild) {
+                        let agrupacionDiv = tempDiv.firstChild;
+                        agrupacionDiv.addEventListener("dragover", function(event) {
+                            event.preventDefault();
+                        });
+                        agrupacionDiv.addEventListener("drop", function(event) {
+                            event.preventDefault();
+                            var parteId = event.dataTransfer.getData("text/plain");
+                            var agrupacionId = agrupacionDiv.dataset.id;
+                            console.log("Parte ID: " + parteId + ", Agrupación ID: " + agrupacionId);
+                            moverParteAUbicacion(parteId, agrupacionId, event.clientX, event.clientY);
+                        });
+                        frame117Div.appendChild(agrupacionDiv);
+                    }
+                }
+            };
+            xhr.send();
+        }
+
+        function moverParteAUbicacion(parteId, agrupacionId, clientX, clientY) {
+            var agrupacionElement = document.querySelector(".empty-state3[data-id='" + agrupacionId + "']");
+            var parteElement = document.querySelector(".card[data-id='" + parteId + "']");
+
+            var boundingRect = agrupacionElement.getBoundingClientRect();
+            var x = clientX - boundingRect.left;
+            var y = clientY - boundingRect.top;
+
+            parteElement.style.left = x + 'px';
+            parteElement.style.top = y + 'px';
+
+            asociarParteAgrupacion(parteId, agrupacionId);
+        }
+
+        function asociarParteAgrupacion(parteId, agrupacionId) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "asociarParteAgrupacion", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    console.log("Parte asociado con éxito");
+                } else {
+                    console.log("Error al asociar parte. Estado: " + xhr.status + ", Respuesta: " + xhr.responseText);
+                }
+            };
+            xhr.onerror = function() {
+                console.log("Error de red al asociar parte");
+            };
+            xhr.send("parteId=" + encodeURIComponent(parteId) + "&agrupacionId=" + encodeURIComponent(agrupacionId));
+        }
+
+        function cerrarParte(id) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "cerrarParte", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    var card = document.querySelector(".card[data-id='" + id + "']");
+                    if (card) {
+                        card.remove();
+                    }
+                }
+            };
+            xhr.send("id=" + encodeURIComponent(id));
+        }
+    </script>
+</body>
+</html>

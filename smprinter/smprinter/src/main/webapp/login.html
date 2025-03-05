@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosLogin.css">
+    <link rel="stylesheet" href="estilosModal.css">
+    <link rel="stylesheet" href="estilosModal2.css">
+    <title>Iniciar Sesión</title>
+<body>
+	<div class="inicio-de-sesi-n">
+	  <div class="body">
+	    <div class="col-4">
+	      <div class="responsive-logotype"></div>
+	      <div class="wrapper">
+	        <div class="inicio-de-sesi-n2">Inicio de sesión</div>
+	        <div
+	          class="para-acceder-a-sm-printer-hub-deber-s-iniciar-sesi-n-con-las-credenciales-que-la-persona-administradora-te-proporcion"
+	        >
+	          Para acceder a SM Printer Hub deberás iniciar sesión con las
+	          credenciales que la persona administradora te proporcionó.
+	        </div>
+	        <hr class="solid">
+	        <div class="spacing-block">
+	          <div class="spacer"></div>
+	        </div>
+	        <form action="gestionLogin" method="post">
+	        <div class="input">
+	          <div class="label">Cuenta</div>
+	          <div class="container" id="containerUser">
+	            <input type="text" name="usuario" id="userInput" class="input-text" placeholder="Indica tu nombre de cuenta">
+	          </div>
+	        </div>
+	        <div class="icons-alert-02" id="errorIcono1" style="display: none;">
+			  <img class="elements5" src="img/alerta.svg" />
+			</div>
+	        <div class="errorUser" id="errorMessage" style="display: none;">
+	        	Esta cuenta no existe. Revisa la ortografía y si el problema persiste contacta con la persona administradora.
+	        </div>
+	        <div class="input">
+	          <div class="label">Contraseña</div>
+	          <div class="container" id="containerPass">
+	          	<input type="password" name="password" id="passInput" class="input-text" placeholder="Escribe aquí tu contraseña">
+	            <div class="particles-trailling-icon">
+	              <div class="icons-view">
+	                <img class="elements" src="img/ojo.svg" id="mostrarPass"/>
+	              </div>
+	            </div>
+	          </div>
+	          <div class="icons-alert-02" id="errorIcono2" style="display: none;">
+			  	<img class="elements5" src="img/alerta.svg" />
+			  </div>
+	          <div class="errorUser" id="errorPass" style="display: none;">
+	          	La contraseña que has introducido no es correcta
+	          </div>
+	          <div class="helper-text">
+	            <div class="icon">
+	              <div class="icons-help-circle">
+	                <img class="elements2" src="img/pregunta.svg" />
+	              </div>
+	            </div>
+	            <div class="helper-text2" id="olvidaPass">¿Has olvidado la contraseña?</div>
+	          </div>
+	        </div>
+	        <div class="button">
+	        	<input type="submit" value="Iniciar Sesión" class="button-text">
+	          	<div class="icons-arrow-right-02-sharp">
+	            <img class="elements3" src="img/flechaDerecha.svg" />
+	          </div>
+	        </div>
+	        <div class="input">
+	          <div class="container2">
+	            <div class="particles-checkbox"></div>
+	            <div class="input-text2">Recuérdame en este equipo</div>
+	            <div class="particles-trailling-icon">
+	              <div class="icons-help-circle2">
+	                <img class="elements4" src="img/pregunta.svg" />
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	      </form>
+	      <div class="spacing-block2">
+	        <div class="spacer"></div>
+	      </div>
+	    </div>
+	    <div class="col-8">
+	      <img class="rectangle-14" src="img/login2.jpg" />
+	    </div>
+	  </div>
+	  </div>
+	  <form action="recuperarContra" method="post">
+	      	<dialog>
+		      <div class="modal">
+				  <div class="headerModal">
+				    <div class="label-titleModal">
+				      <div class="labelModal">¿Has olvidado la contraseña?</div>
+				      <div class="titleModal">Recuperación de la contraseña</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01Modal">
+				    <img class="elementsModal" src="img/cruz.svg" id="quitarRecuperacion"/>
+				  </div>
+				  <div class="bodyModal">
+				    <div class="descriptionModal">Para restablecer tu contraseña debes completar los siguientes pasos</div>
+				    <div class="stepsModal">
+				      <div class="particle-step-itemModal">
+				        <div class="icons-half-full-circleModal">
+				          <img class="elements2Modal" src="img/semiCirculo.svg" />
+				        </div>
+				        <div class="contentModal">
+				          <div class="title2Modal">Identificación</div>
+				          <div class="label2Modal">Paso 1</div>
+				        </div>
+				      </div>
+				      <div class="particle-step-item2Modal">
+				        <div class="icons-incomplete-circleModal">
+				          <img class="elements4Modal" src="img/circulo.svg" />
+				        </div>
+				        <div class="contentModal">
+				          <div class="title3Modal">Nueva contraseña</div>
+				          <div class="label3Modal">Paso 2</div>
+				        </div>
+				      </div>
+				    </div>
+				    <div class="inputModal">
+				      <div class="label4Modal">Cuenta</div>
+				      <div class="containerModal" id="containerUserModal">
+	            			<input type="text" name="usuario" id="userInputModal" class="input-textModal" placeholder="Indica tu nombre de cuenta">
+				      </div>
+				      <div class="icons-alert-02" id="errorIcono1Modal" style="display: none;">
+						  <img class="elements5" src="img/alerta.svg" />
+					  </div>
+				      <div class="errorUser" id="errorMessageModal" style="display: none;">Esta cuenta no existe. Revisa la ortografía y si el problema persiste contacta con la persona administradora.</div>
+				      
+				      <div class="label4Modal">Pregunta de seguridad 1</div>
+				      <div class="containerModal" id="containerPregunta1">
+	            			<input type="text" name="respuesta1" id="respuesta1" class="input-textModal" placeholder="Respuesta 1">
+				      </div>
+				      
+				      <div class="label4Modal">Pregunta de seguridad 2</div>
+				      <div class="containerModal" id="containerPregunta2">
+	            			<input type="text" name="respuesta2" id="respuesta2" class="input-textModal" placeholder="Respuesta 2">
+				      </div>
+				      
+				      <div class="label4Modal">Pregunta de seguridad 3</div>
+				      <div class="containerModal" id="containerPregunta3">
+	            			<input type="text" name="respuesta3" id="respuesta3" class="input-textModal" placeholder="Respuesta 3">
+				      </div>
+				      
+				      <div class="icons-alert-02" id="errorIcono2Modal" style="display: none;">
+						  <img class="elements5" src="img/alerta.svg" />
+					  </div>
+				      <div class="errorUser" id="errorRespuestas" style="display: none;">Las respuestas son incorrectas. Si el problema persiste contacta con la persona administradora.</div>
+				    </div>
+				  </div>
+				  <div class="button-boxModal">
+				    <div class="cancel-buttonModal">
+				      <div class="button-textModal" id="cancelarRecuperacion">Cancelar</div>
+				    </div>
+				    <div class="primary-buttonModal">
+				      <input type="submit" value="Siguiente" class="button-text2Modal">
+				      <div class="icons-arrow-right-02-sharpModal">
+				        <img class="elements5Modal" src="img/flechaDerecha.svg" />
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				</dialog>
+	      </form>
+	      <form action="contraNueva" method="post">
+	      	<dialog id="dialog2">
+	      		<div class="modal">
+				  <div class="headerModal">
+				    <div class="label-titleModal">
+				      <div class="labelModal">¿Has olvidado la contraseña?</div>
+				      <div class="titleModal">Recuperación de la contraseña</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01Modal">
+				    <img class="elementsModal" src="img/cruz.svg" id="quitarRecuperacionModal"/>
+				  </div>
+				  <div class="bodyModal">
+				    <div class="descriptionModal">Para restablecer tu contraseña debes completar los siguientes pasos</div>
+				    <div class="stepsModal">
+				      <div class="particle-step-itemModal">
+				        <div class="icons-half-full-circleModal">
+				          <img class="elements2Modal" src="img/tick.svg" />
+				        </div>
+				        <div class="contentModal">
+				          <div class="title3Modal">Identificación</div>
+				          <div class="label3Modal">Paso 1</div>
+				        </div>
+				      </div>
+				      <div class="particle-step-itemModal">
+				        <div class="icons-incomplete-circleModal">
+				          <img class="elements4Modal" src="img/semiCirculo.svg" />
+				        </div>
+				        <div class="contentModal">
+				          <div class="title2Modal">Nueva contraseña</div>
+				          <div class="label2Modal">Paso 2</div>
+				        </div>
+				      </div>
+				    </div>
+				      <input type="hidden" name="usuario" id="usuarioInput">
+				      <div class="label4Modal">Nueva contraseña</div>
+				      <div class="containerModal" id="containerNuevaContra">
+	            			<input type="password" name="nuevaPassword" id="nuevaContra" class="input-textModal" placeholder="Escribe tu nueva contraseña">
+	            			<div class="particles-trailling-icon">
+				              <div class="icons-view">
+				                <img class="elements" src="img/ojo.svg" id="mostrarNuevaPass"/>
+				              </div>
+				            </div>
+				      </div>
+				      
+				      <div class="label4Modal">Repite la contraseña</div>
+				      <div class="containerModal" id="containerConfirmacionNuevaContra">
+	            			<input type="password" name="confirmarPassword" id="confirmacionNuevaContra" class="input-textModal" placeholder="Escribe de nuevo tu nueva contraseña">
+	            			<div class="particles-trailling-icon">
+				              <div class="icons-view">
+				                <img class="elements" src="img/ojo.svg" id="mostrarConfirmacionNuevaPass"/>
+				              </div>
+				            </div>
+				      </div>
+				      
+				      <div class="icons-alert-02" id="errorIcono2ModalNuevaContra" style="display: none;">
+						  <img class="elements5" src="img/alerta.svg" />
+					  </div>
+				      <div class="errorUser" id="errorNuevaContra" style="display: none;">Las contraseñas no coinciden.</div>
+				    </div>
+				  </div>
+				  <div class="button-boxModal">
+				    <div class="cancel-buttonModal">
+				      <div class="button-textModal" id="cancelarRecuperacionModal">Cancelar</div>
+				    </div>
+				    <div class="primary-buttonModal">
+				      <input type="submit" value="Iniciar Sesión" class="button-text2Modal">
+				      <div class="icons-arrow-right-02-sharpModal">
+				        <img class="elements5Modal" src="img/flechaDerecha.svg" />
+				      </div>
+				    </div>
+				  </div>
+	      	</dialog>
+	      	<dialog id="dialog3">
+	      		<div class="modalConfirm">
+				  <div class="headerModalConfirm">
+				    <div class="label-titleModalConfirm">
+				      <div class="labelModalConfirm">¿Has olvidado la contraseña?</div>
+				      <div class="titleModalConfirm">¡Enhorabuena!</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01ModalConfirm">
+				    <img class="elementsModalConfirm" src="img/cruz.svg" id="salirModal"/>
+				  </div>
+				  <div class="bodyModalConfirm">
+				    <div class="notificationsModalConfirm">
+				      <div class="leading-boxModalConfirm">
+				        <div class="iconModalConfirm">
+				          <div class="icons-tick-02ModalConfirm">
+				            <img class="elements2ModalConfirm" src="img/tick.svg" />
+				          </div>
+				        </div>
+				        <div class="title2ModalConfirm">
+				          La contraseña ha sido modificada con éxito. Prueba a iniciar sesión
+				          con tus nuevas credenciales
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="button-boxModalConfirm">
+				    <div class="primary-buttonModalConfirm">
+				      <div class="button-textModal2" id="salirBotonModal">Iniciar sesión</div>
+				    </div>
+				  </div>
+				</div>
+	      	</dialog>
+	      </form>
+	<script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        var error = getParameterByName('error');
+        var errorMessage = document.getElementById('errorMessage');
+        var errorPass = document.getElementById('errorPass');
+        var errorMessageModal = document.getElementById('errorMessageModal');
+        var errorRespuestas = document.getElementById('errorRespuestas');
+        var errorNuevaContra = document.getElementById('errorNuevaContra');
+        
+        var userInput = document.getElementById('userInput');
+        var containerUser = document.getElementById('containerUser');
+        var passInput = document.getElementById('passInput');
+        var containerPass = document.getElementById('containerPass');
+
+        var mostrarPass = document.getElementById('mostrarPass');
+        
+        var dialog = document.querySelector('dialog');
+        var olvidaPass = document.getElementById('olvidaPass');
+        var quitarRecuperacion = document.getElementById('quitarRecuperacion');
+        var cancelarRecuperacion = document.getElementById('cancelarRecuperacion');
+        
+        var usuario = getParameterByName('usuario');
+        var dialog2 = document.getElementById('dialog2');
+        var correcto = getParameterByName('correcto');
+        var usuarioInput = document.getElementById('usuarioInput');
+        
+        var nuevaContra = document.getElementById('nuevaContra');
+        var confirmacionNuevaContra = document.getElementById('confirmacionNuevaContra');
+        
+        if (error === 'notfound') {
+            errorMessage.style.display = 'block';
+            errorIcono1.style.display = 'block';
+            userInput.style.background  = '#FEE0E0';
+            containerUser.style.background = '#FEE0E0';
+        }
+        
+        if(error === 'invalid'){
+        	errorPass.style.display = 'block';
+        	errorIcono2.style.display = 'block';
+        	passInput.style.background  = '#FEE0E0';
+            containerPass.style.background = '#FEE0E0';
+        }
+        
+        if(error === 'usuario_no_existe'){
+        	dialog.open = true;
+        	errorMessageModal.style.display = 'block';
+        	errorIcono1Modal.style.display = 'block';
+        	userInputModal.style.background = "#FEE0E0";
+        	containerUserModal.style.background = "#FEE0E0";
+        }
+        
+        if(error === 'respuestas'){
+        	dialog.open = true;
+        	errorRespuestas.style.display = 'block';
+        	errorIcono2Modal.style.display = 'block';
+        	respuesta1.style.background = "#FEE0E0";
+        	respuesta2.style.background = "#FEE0E0";
+        	respuesta3.style.background = "#FEE0E0";
+        	containerPregunta1.style.background = "#FEE0E0";
+        	containerPregunta2.style.background = "#FEE0E0";
+        	containerPregunta3.style.background = "#FEE0E0";
+        }
+        
+        if(error === 'noCoinciden'){
+        	dialog2.open = true;
+        	errorNuevaContra.style.display = 'block';
+        	errorIcono2ModalNuevaContra.style.display = 'block';
+        	nuevaContra.style.background = "#FEE0E0";
+        	confirmacionNuevaContra.style.background = "#FEE0E0"
+        	containerNuevaContra.style.background = "#FEE0E0";
+        	containerConfirmacionNuevaContra.style.background = "#FEE0E0";
+        }
+        
+        if(correcto === 'true'){
+        	dialog2.open = true;
+        	usuarioInput.value = usuario;
+        }
+        
+        if(correcto === 'cambiada'){
+        	dialog3.open = true;
+        }
+        
+        function cambiarVisibilidadPass(){
+        	if(passInput.type === "password"){
+        		passInput.type = "text";
+        	} else{
+        		passInput.type = "password";
+        	}
+        }
+        
+        function cambiarVisibilidadNuevaPass(){
+        	if(nuevaContra.type === "password"){
+        		nuevaContra.type = "text";
+        	}else{
+        		nuevaContra.type = "password";
+        	}
+        }
+        
+        function cambiarVisibilidadConfirmacion(){
+        	if(confirmacionNuevaContra.type === "password"){
+        		confirmacionNuevaContra.type = "text";
+        	}else{
+        		confirmacionNuevaContra.type = "password";
+        	}
+        }
+        
+        mostrarPass.addEventListener('click', cambiarVisibilidadPass);
+        mostrarNuevaPass.addEventListener('click', cambiarVisibilidadNuevaPass);
+        mostrarConfirmacionNuevaPass.addEventListener('click', cambiarVisibilidadConfirmacion);
+        
+        
+        olvidaPass.addEventListener('click', function(){
+        	dialog.open = true;
+        });
+        
+        quitarRecuperacion.addEventListener('click', function(){
+        	dialog.open = false;
+        });
+        
+        cancelarRecuperacion.addEventListener('click', function(){
+        	dialog.open = false;
+        });
+        
+        quitarRecuperacionModal.addEventListener('click', function(){
+        	dialog2.open = false;
+        });
+        
+        cancelarRecuperacionModal.addEventListener('click', function(){
+        	dialog2.open = false;
+        });
+        
+        salirModal.addEventListener('click', function(){
+        	dialog3.open = false;
+        });
+        
+        salirBotonModal.addEventListener('click', function(){
+        	dialog3.open = false;
+        });
+    </script>
+</body>
+</html>

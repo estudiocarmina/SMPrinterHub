@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	<link rel="stylesheet" href="estilosMiembros.css">
+	<link rel="stylesheet" href="estilosTablaUsuarios.css">
+</head>
+<body>
+<div class="user-management">
+  <div class="body">
+    <div class="col-3">
+      <div class="wrapper">
+        <div class="te-damos-la-bienvenida-a-sm-printer-hub">
+          Te damos la bienvenida a SMPrinter Hub
+        </div>
+        <div class="tabs">
+          <div class="particles-tab-item">
+            <div class="icons-home-01">
+              <img class="elements" src="img/home.svg" />
+            </div>
+            <div class="tab-title"><a href="index2.html">Inicio</a></div>
+          </div>
+          <div class="particles-tab-item">
+            <div class="icons-file-search">
+              <img class="elements2" src="img/buscadorPartes.svg" />
+            </div>
+            <div class="tab-title"><a href="partesDeTrabajo.html">Partes de trabajo</a></div>
+          </div>
+          <div class="particles-tab-item">
+            <div class="icons-dashboard-square-add">
+              <img class="elements3" src="img/espaciosTrabajo.svg" />
+            </div>
+            <div class="tab-title"><a href="espaciosTrabajo.html">Espacios de trabajo</a></div>
+          </div>
+          <div class="particles-tab-item2">
+            <div class="icons-user-multiple">
+              <img class="elements4" src="img/miembros.svg" />
+            </div>
+            <div class="tab-title2">Miembros</div>
+          </div>
+        </div>
+        <div class="button" id="abrirNuevoParte">
+          <div class="button-text">Crear nuevo parte</div>
+          <div class="icons-add-01">
+            <img class="elements5" src="img/sumar.svg" />
+          </div>
+        </div>
+      </div>
+      <div class="wrapper2">
+        <div class="spacing-block">
+          <div class="spacer"></div>
+        </div>
+        <div class="button2">
+          <div class="button-text2">Mi cuenta</div>
+        </div>
+        <div class="button3">
+          <div class="button-text2">Cerrar sesión</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="frame-3">
+        <div class="miembros">Miembros</div>
+        <div class="buttons-box" id="addMiembro">
+          <div class="button4">
+            <div class="button-text3">Añadir miembro</div>
+            <div class="icons-user-add-01">
+              <img class="elements6" src="img/nuevoMiembro.svg" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="notifications" id="notiCorrecta" style="display: none;">
+		  <div class="leading-boxNoti">
+		    <div class="iconNoti">
+		      <div class="icons-tick-02Noti">
+		        <img class="elementsNoti" src="img/tick.svg" />
+		      </div>
+		    </div>
+		    <div class="titleNoti">Miembro añadido correctamente</div>
+		  </div>
+		  <div class="icon2Noti" id="quitarNoti">
+		    <div class="icons-cancel-01Noti">
+		      <img class="elements2Noti" src="img/cruz.svg" />
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="notificationsEliminar" id="notiCorrectaEliminacion" style="display: none;">
+		  <div class="leading-boxEliminar">
+		    <div class="iconEliminar">
+		      <div class="icons-tick-02Eliminar">
+		        <img class="elementsEliminar" src="img/tick.svg" />
+		      </div>
+		    </div>
+		    <div class="titleEliminar">1 miembro ha sido eliminado correctamente</div>
+		  </div>
+		  <div class="icon2Eliminar" id="quitarNotiEliminacion">
+		    <div class="icons-cancel-01Eliminar">
+		      <img class="elements2Eliminar" src="img/cruz.svg" />
+		    </div>
+		  </div>
+		</div>
+		
+		<div class="notificationsIncorrecta" id="notiIncorrecta" style="display: none;">
+		  <div class="leading-boxIncorrecta">
+		    <div class="iconIncorrecta">
+		      <div class="icons-cancel-01Incorrecta">
+		        <img class="elementsIncorrecta" src="img/cruz.svg" />
+		      </div>
+		    </div>
+		    <div class="titleIncorrecta">
+		      Miembro no añadido, se ha producido un error. Por favor, vuelva a
+		      intentarlo más tarde y si el error persiste contacte con el personal de
+		      administración.
+		    </div>
+		  </div>
+		  <div class="icon2Incorrecta" id="quitarNotiIncorrecta">
+		    <div class="icons-cancel-01Incorrecta">
+		      <img class="elements2Incorrecta" src="img/cruz.svg" />
+		    </div>
+		  </div>
+		</div>
+		
+      </div>
+      <div class="search-nav">
+        <div class="icons-search">
+          <img class="elements7" src="img/lupa.svg" />
+        </div>
+        <input type="text" class="search-term" id="buscadorMiembro" placeholder="Busca aquí un miembro">
+        <div class="icons-cancel-01">
+          <img class="elements8" src="img/cruz.svg" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="particles-table-filters">
+          <div class="label">Miembros</div>
+          <div class="filters">
+            <div class="dropdown-tag">
+              <div class="tag">
+                <div class="leading-group">
+                  <div class="leading-icon">
+                    <div class="icons-user-multiple2">
+                      <img class="elements9" src="img/miembros.svg" />
+                    </div>
+                  </div>
+                  <select name="rolFiltrar" id="rolFiltrar" class="label2">
+				  </select>
+                </div>
+                <div class="particles-tag-close-button">
+                  <div class="icons-arrow-down-01-sharp">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table">
+		  <div class="wrapperTabla">
+			<div class="colTabla">
+			      <div class="particles-table-heading2Tabla">
+			        <div class="input-textTabla">Nombre de cuenta</div>
+			        <div class="icons-arrow-up-down-sharpTabla">
+			          <img class="elementsTabla" src="img/ordenar.svg" />
+			        </div>
+			      </div>
+			    </div>
+			    <div class="colTabla">
+			      <div class="particles-table-heading3Tabla">
+			        <div class="input-text3Tabla">Rol</div>
+			      </div>
+			    </div>
+			    <div class="col3Tabla">
+			      <div class="particles-table-headingTabla">
+			        <div class="input-text3Tabla">Acciones</div>
+			      </div>
+			    </div>
+		    </div>
+			<div class="wrapperTablaUsuarios" id="listaUsuarios">
+
+			</div>
+		  </div>
+		</div>
+      </div>
+    </div>
+    	<dialog id="dialog1">
+    	<form action="eliminarUsuario" method="post">
+    		<input type="hidden" id="usuarioEliminar" name="usuario" value="">
+			  <div class="modal">
+				  <div class="headerModal">
+				    <div class="label-titleModal">
+				      <div class="titleModal">Eliminar miembro</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01Modal">
+				    <img class="elementsModal" id="quitarModal" src="img/cruz.svg" />
+				  </div>
+				  <div class="bodyModal">
+				    <div class="descriptionModal">¿Seguro que deseas eliminar el miembro?
+							Esta opción es irreversible y supondrá la pérdida de todos los datos almacenados del mismo y la revocación de los accesos a la plataforma.</div>
+				  </div>
+				  <div class="button-boxModal">
+				    <div class="cancel-buttonModal">
+				      <div class="button-textModal" id="salirModal">Cancelar</div>
+				    </div>
+				    <div class="primary-buttonModal">
+				      <input type="submit" value="Eliminar" class="button-text2ModalEliminar">
+				      <div class="icons-delete-02Modal">
+				        <img class="elements2Modal" src="img/borrar.svg" />
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</form>
+		</dialog>
+		<form action="crearUsuario" method="post">
+			<dialog id="dialog2">
+				<div class="modal2">
+				  <div class="headerModal2">
+				    <div class="label-titleModal2">
+				      <div class="titleModal2">Añadir miembro</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01Modal2">
+				    <img class="elementsModal2" id="quitarModal2" src="img/cruz.svg" />
+				  </div>
+				  <div class="bodyModal2">
+				    <div class="inputs-groupModal2">
+				      <div class="rowModal2">
+				        <div class="inputModal2">
+				          <div class="wrapperModal2">
+				            <div class="labelModal2">Rol</div>
+				            <div class="containerModal2">
+				              <select name="rol" id="rolInput" class="input-textModal2" placeholder="Selecciona el rol del miembro">
+				              </select>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row2Modal2">
+				        <div class="input2Modal2">
+				          <div class="label2Modal2">Usuario</div>
+				          <div class="containerModal2">
+				            <input type="text" name="usuario" id="userInput" class="input-textModal2" placeholder="Inserta aquí el email del miembro">
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row2Modal2">
+				        <div class="input2Modal2">
+				          <div class="label2Modal2">Pregunta 1</div>
+				          <div class="containerModal2">
+				            <input type="text" name="preg1" id="preg1Input" class="input-textModal2" placeholder="Inserta aquí la respuesta a la pregunta">
+				          </div>
+				        </div>
+				      </div>
+				      <div class="rowModal2">
+				        <div class="inputModal2">
+				          <div class="label2Modal2">Contraseña</div>
+				          <div class="containerModal2" id="containerPass">
+				            <input type="password" name="password" id="passInput" class="input-textModal2" placeholder="Escribe aquí la contraseña">
+				            <div class="particles-trailling-icon2Modal2">
+				              <div class="icons-viewModal2" id="mostrarPass">
+				                <img class="elements3Modal2" src="img/ojo.svg"  />
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="inputModal2">
+				          <div class="label2Modal2">Repite la contraseña</div>
+				          <div class="containerModal2" id="containerConfirmPass">
+				            <input type="password" name="confirmarPassword" id="confirmPassInput" class="input-textModal2" placeholder="Escribe aquí la contraseña">
+				            <div class="particles-trailling-icon2Modal2">
+				              <div class="icons-viewModal2" id="mostrarPass2">
+				                <img class="elements4Modal2" src="img/ojo.svg" />
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				  <div class="button-boxModal2">
+				    <div class="cancel-buttonModal2">
+				      <div class="button-textModal2" id="salirModal2">Cancelar</div>
+				    </div>
+				    <div class="primary-buttonModal2">
+				      <input type="submit" value="Añadir" class="button-text2Modal2">
+				      <div class="icons-add-01Modal2">
+				        <img class="elements5Modal2" src="img/sumar.svg" />
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</dialog>
+			</form>
+			<dialog id="dialog3">
+				<form id="editUserForm" action="editarUsuario" method="post">
+				<input type="hidden" id="usuarioEditar" name="usuarioEditar" value="">
+					<div class="modalEditar">
+					  <div class="headerEditar">
+					    <div class="label-titleEditar">
+					      <div class="titleEditar">Editar miembro</div>
+					    </div>
+					  </div>
+					  <div class="icons-cancel-01Editar" id="quitarModal3">
+					    <img class="elementsEditar" src="img/cruz.svg" />
+					  </div>
+					  <div class="bodyEditar">
+					    <div class="inputs-groupEditar">
+					      <div class="rowEditar">
+					        <div class="inputEditar">
+					          <div class="wrapperEditar">
+					            <div class="labelEditar">Rol</div>
+					            <div class="containerEditar">
+					              <select name="rolEditar" id="rolInputEditar" class="input-textEditar">
+				              	  </select>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="rowEditar">
+					        <div class="inputEditar">
+					          <div class="label2Editar">Nombre de cuenta</div>
+					          <div class="containerEditar">
+					            <input type="text" name="usuarioEditarNuevo" id="userInputEditar" class="input-textEditar">
+					          </div>
+					        </div>
+					      </div>
+					      <div class="rowEditar">
+					        <div class="inputEditar">
+					          <div class="label2Editar">Contraseña</div>
+					          <div class="containerEditar">
+					            <input type="password" name="passwordEditar" id="passInputEditar" class="input-textEditar">
+					            <div class="particles-trailling-icon2Editar">
+					              <div class="icons-viewEditar">
+					                <img class="elements3Editar" src="img/ojo.svg" />
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					      <div class="rowEditar">
+					        <div class="inputEditar">
+					          <div class="label2Editar">Repetir contraseña</div>
+					          <div class="containerEditar">
+					            <input type="password" name="confirmarPasswordEditar" id="confirmPassInputEditar" class="input-textEditar">
+					            <div class="particles-trailling-icon2Editar">
+					              <div class="icons-viewEditar">
+					                <img class="elements4Editar" src="img/ojo.svg" />
+					              </div>
+					            </div>
+					          </div>
+					        </div>
+					      </div>
+					    </div>
+					  </div>
+					  <div class="button-boxEditar">
+					    <div class="cancel-buttonEditar" id="salirModal3">
+					      <div class="button-textEditar">Cancelar</div>
+					    </div>
+					    <div class="primary-buttonEditar">
+					      <input type="submit" value="Guardar cambios" class="button-text2Editar">
+					      <div class="icons-tick-02Editar">
+					        <img class="elements5Editar" src="img/tick.svg" />
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</form>
+			</dialog>
+			<dialog id="dialog4">
+			<form method="post" action="gestionPartes">
+				<div class="modalNuevoParte">
+				  <div class="headerNuevoParte">
+				    <div class="label-titleNuevoParte">
+				      <div class="titleNuevoParte">Nuevo parte</div>
+				    </div>
+				  </div>
+				  <div class="icons-cancel-01NuevoParte" id="salirModal4">
+				    <img class="elementsNuevoParte" src="img/cruz.svg" />
+				  </div>
+				  <div class="bodyNuevoParte">
+				    <div class="inputs-groupNuevoParte">
+				      <div class="rowNuevoParte">
+				        <div class="inputNuevoParte">
+				          <div class="label2NuevoParte">Cliente</div>
+				          <div class="containerNuevoParte">
+				            <input type="text" name="cliente" id="cliente" class="input-textNuevoParte" placeholder="Nombre del cliente">
+				          </div>
+				        </div>
+				        <div class="row2NuevoParte">
+				          <div class="input2NuevoParte">
+				            <div class="containerNuevoParte">
+				              <div class="input-text2NuevoParte">O añade un cliente nuevo...</div>
+				            </div>
+				          </div>
+				          <div class="buttonNuevoParte">
+				            <div class="icons-add-01NuevoParte">
+				              <img class="elements2NuevoParte" src="img/sumar.svg" />
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row3NuevoParte">
+				        <div class="input2NuevoParte">
+				          <div class="label2NuevoParte">Tipo de cliente</div>
+				          <div class="container2NuevoParte">
+				            <input type="radio" class="particles-checkbox2NuevoParte" name="tipoCliente" id="propio" value="Propio">
+				            <div class="input-textNuevoParte">Propio</div>
+				          </div>
+				        </div>
+				        <div class="input2NuevoParte">
+				          <div class="container2NuevoParte">
+				            <input type="radio" class="particles-checkbox2NuevoParte" name="tipoCliente" id="comercial" value="Comercial">
+				            <div class="input-textNuevoParte">Comercial</div>
+				          </div>
+				        </div>
+				        <div class="input2NuevoParte">
+				          <div class="container2NuevoParte">
+				            <input type="radio" class="particles-checkbox2NuevoParte" name="tipoCliente" id="tercero" value="Tercero">
+				            <div class="input-textNuevoParte">Tercero</div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row4NuevoParte">
+				        <div class="input2NuevoParte">
+				          <div class="label2NuevoParte">Fecha de entrega</div>
+				          <div class="containerNuevoParte">
+				            <input type="date" class="input-textNuevoParte" id="fechaEntrega" name="fechaEntrega"> 
+				          </div>
+				          <div class="helper-textNuevoParte">
+				            <div class="iconNuevoParte">
+				              <div class="icons-help-circleNuevoParte">
+				                <img class="elements5NuevoParte" src="img/pregunta.svg" />
+				              </div>
+				            </div>
+				            <div class="helper-text2NuevoParte">El formato debe ser DD/MM/YY</div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row5NuevoParte">
+				        <div class="inputNuevoParte">
+				          <div class="label2NuevoParte">Ubicación</div>
+				          <div class="containerNuevoParte">
+				            <input type="text" name="ubicacion" id="ubicacion" class="input-text2NuevoParte" placeholder="Escribe aquí la ubicación">
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row4NuevoParte">
+				        <div class="input2NuevoParte">
+				          <div class="label2NuevoParte">Trabajo</div>
+				          <div class="containerNuevoParte">
+				            <input type="text" name="trabajo" id="trabajo" class="input-text2NuevoParte">
+				          </div>
+				        </div>
+				        <div class="row6NuevoParte">
+				          <div class="input2NuevoParte">
+				            <div class="label2NuevoParte">Impresión</div>
+				            <div class="container2NuevoParte">
+				                <input type="radio" class="particles-checkbox2NuevoParte" name="impresion" id="offset" value="Offset">
+				            	<div class="input-textNuevoParte">Offset</div>
+				            </div>
+				          </div>
+				          <div class="input2NuevoParte">
+				            <div class="container2NuevoParte">
+				                <input type="radio" class="particles-checkbox2NuevoParte" name="impresion" id="digital" value="Digital">
+				            	<div class="input-textNuevoParte">Digital</div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="frame-1NuevoParte">
+				        <div class="row7NuevoParte">
+				          <div class="inputNuevoParte">
+				            <div class="wrapperNuevoParte">
+				              <div class="label3NuevoParte">Productos</div>
+				              <div class="containerNuevoParte">
+				                <select name="producto" id="producto" class="input-textNuevoParte">
+				                	<option value="Tarjetas">Tarjetas</option>
+				                	<option value="Talonarios">Talonarios</option>
+				                	<option value="Carteles">Carteles</option>
+				                	<option value="Sobre/Bolsa">Sobre/Bolsa</option>
+				                	<option value="Cartas">Cartas</option>
+				                	<option value="Carpetas">Carpetas</option>
+				                	<option value="Folletos">Folletos</option>
+				                	<option value="Cuadernos">Cuadernos</option>
+				                	<option value="Pegatinas">Pegatinas</option>
+				                	<option value="Rifa">Rifa</option>
+				                	<option value="Entradas">Entradas</option>
+				                	<option value="Invitaciones">Invitaciones</option>
+				  				</select>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="row2NuevoParte">
+				            <div class="input2NuevoParte">
+				              <div class="containerNuevoParte">
+				                <div class="input-text2NuevoParte">O añade un producto nuevo...</div>
+				              </div>
+				            </div>
+				            <div class="buttonNuevoParte">
+				              <div class="icons-add-01NuevoParte">
+				                <img class="elements8NuevoParte" src="img/sumar.svg" />
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="row8NuevoParte">
+				          <div class="inputNuevoParte">
+				            <div class="wrapperNuevoParte">
+				              <div class="label3NuevoParte">Tintas</div>
+				              <div class="containerNuevoParte">
+				                <select name="tintas" id="tintas" class="input-textNuevoParte">
+				                	<option value="1+0">1+0</option>
+				                	<option value="1+1">1+1</option>
+				                	<option value="2+0">2+0</option>
+				                	<option value="2+1">2+1</option>
+				                	<option value="2+2">2+2</option>
+				                	<option value="3+0">3+0</option>
+				                	<option value="4+0">4+0</option>
+				                	<option value="4+1">4+1</option>
+				                	<option value="4+4">4+4</option>
+				  				</select>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="row4NuevoParte">
+				            <div class="input2NuevoParte">
+				              <div class="containerNuevoParte">
+				                <input type="text" name="colorTinta" id="colorTinta" class="input-textNuevoParte" placeholder="Color de tinta">
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="frame-2NuevoParte">
+				        <div class="row7NuevoParte">
+				          <div class="inputNuevoParte">
+				            <div class="wrapperNuevoParte">
+				              <div class="label3NuevoParte">Tamaño</div>
+				              <div class="containerNuevoParte">
+				                <select name="tamanho" id="tamanho" class="input-textNuevoParte">
+				                	<option value="85x50">85x50</option>
+				                	<option value="A6">A6</option>
+				                	<option value="A5">A5</option>
+				                	<option value="A4">A4</option>
+				                	<option value="A3">A3</option>
+				                	<option value="10x21">10x21</option>
+				                	<option value="21x21">21x21</option>
+				                	<option value="32x45">32x45</option>
+				                	<option value="33x49">33x49</option>
+				                	<option value="11,5x22,5">11,5x22,5</option>
+				  				</select>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="row2NuevoParte">
+				            <div class="input2NuevoParte">
+				              <div class="containerNuevoParte">
+				                <div class="input-text2NuevoParte">O añade un tamaño nuevo...</div>
+				              </div>
+				            </div>
+				            <div class="buttonNuevoParte">
+				              <div class="icons-add-01NuevoParte">
+				                <img class="elements11NuevoParte" src="img/sumar.svg" />
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="row9NuevoParte">
+				          <div class="inputNuevoParte">
+				            <div class="wrapperNuevoParte">
+				              <div class="label3NuevoParte">Papel</div>
+				              <div class="containerNuevoParte">
+				                <select name="papel" id="papel" class="input-textNuevoParte">
+				                	<option value="Quimico">Quimico</option>
+				                	<option value="Est. brillo 135gr">Est. brillo 135gr</option>
+				                	<option value="Est. brillo 250gr">Est. brillo 250gr</option>
+				                	<option value="Est. brillo 300gr">Est. brillo 300gr</option>
+				                	<option value="Cartulina offset blanco 180gr">Cartulina offset blanco 180gr</option>
+				                	<option value="Cartulina offset blanco 240gr">Cartulina offset blanco 240gr</option>
+				                	<option value="Cartulina offset color">Cartulina offset color</option>
+				                	<option value="Offset blanco 80gr">Offset blanco 80gr</option>
+				                	<option value="Offset color 80gr">Offset color 80gr</option>
+				                	<option value="Offset blanco 90gr">Offset blanco 90gr</option>
+				                	<option value="Sobre americano blanco">Sobre americano blanco</option>
+				  				</select>
+				              </div>
+				            </div>
+				          </div>
+				          <div class="row2NuevoParte">
+				            <div class="input2NuevoParte">
+				              <div class="containerNuevoParte">
+				                <div class="input-text2NuevoParte">O añade un papel nuevo...</div>
+				              </div>
+				            </div>
+				            <div class="buttonNuevoParte">
+				              <div class="icons-add-01NuevoParte">
+				                <img class="elements13NuevoParte" src="img/sumar.svg" />
+				              </div>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row4NuevoParte">
+				        <div class="input2NuevoParte">
+				          <div class="label2NuevoParte">Cantidad</div>
+				          <div class="container3NuevoParte">
+				            <textarea name="cantidad" id="cantidad" class="input-text3NuevoParte"></textarea>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row5NuevoParte">
+				        <div class="inputNuevoParte">
+				          <div class="label2NuevoParte">Formato impresión</div>
+				          <div class="containerNuevoParte">
+				            <input type="text" name="formatoImpresion" id="formatoImpresion" class="input-text2NuevoParte" placeholder="">
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row4NuevoParte">
+				        <div class="row10NuevoParte">
+				          <div class="input3NuevoParte">
+				            <div class="label2NuevoParte">Hojas</div>
+				            <div class="containerNuevoParte">
+				              <textarea class="input-text4NuevoParte" id="hojas" name="hojas"></textarea>
+				            </div>
+				          </div>
+				        </div>
+				        <div class="row7NuevoParte">
+				          <div class="input4NuevoParte">
+				            <div class="label2NuevoParte">Observaciones</div>
+				            <div class="container4NuevoParte">
+				              <textarea name="observaciones" id="observaciones" class="input-text4NuevoParte"></textarea>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row5NuevoParte">
+				        <div class="inputNuevoParte">
+				          <div class="label2NuevoParte">Precio</div>
+				          <div class="containerNuevoParte">
+				            <div class="icons-euroNuevoParte">
+				              <img class="elements14NuevoParte" src="img/euro.svg" />
+				            </div>
+				            <input type="number" class="input-textNuevoParte" step=".01" id="total" name="total"/>
+				          </div>
+				        </div>
+				      </div>
+				      <div class="row3NuevoParte">
+				        <div class="input2NuevoParte">
+				          <div class="label2NuevoParte">Estado del parte</div>
+				          <div class="container2NuevoParte">
+				            <input type="radio" class="particles-checkbox2NuevoParte" name="estado" id="abierto" value="ABIERTO" checked>
+				            <div class="input-textNuevoParte">ABIERTO</div>
+				          </div>
+				        </div>
+				        <div class="input2NuevoParte">
+				          <div class="container2NuevoParte">
+				            <input type="radio" class="particles-checkbox2NuevoParte" name="estado" id="cerrado" value="CERRADO">
+				            <div class="input-textNuevoParte">CERRADO</div>
+				          </div>
+				        </div>
+				      </div>
+				  <div class="button-boxNuevoParte">
+				    <div class="cancel-buttonNuevoParte" id="quitarModal4">
+				      <div class="button-textNuevoParte">Cancel</div>
+				    </div>
+				    <div class="primary-buttonNuevoParte">
+				      <input type="submit" value="Crear parte" class="button-text2NuevoParte">
+				      <div class="icons-arrow-right-02-sharpNuevoParte">
+				        <img class="elements18NuevoParte" src="img/flechaDerecha.svg" />
+				      </div>
+				    </div>
+				  </div>
+				    </div>
+				  </div>
+				</div>
+				</form>
+			</dialog>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	document.getElementById('buscadorMiembro').addEventListener('input', function() {
+        var searchTerm = this.value.trim(); // Obtener el término de búsqueda y eliminar espacios en blanco
+        buscarMiembro(searchTerm); // Llamar a la función para buscar miembro
+    });
+
+    // Función para buscar miembro
+    function buscarMiembro(searchTerm) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    document.getElementById('listaUsuarios').innerHTML = xhr.responseText;
+                } else {
+                    console.error("Error al buscar miembro.");
+                }
+            }
+        };
+        xhr.open("GET", "buscarMiembro?searchTerm=" + encodeURIComponent(searchTerm), true);
+        xhr.send();
+    }
+    
+	document.querySelectorAll('#eliminacionUsuario').forEach(function(element) {
+	    element.addEventListener('click', function() {
+	        var usuario = this.querySelector('.elements4Tabla').getAttribute('data-usuario');
+	        eliminarUsuario(usuario);
+	    });
+	});
+	
+	document.querySelectorAll('#edicionUsuario').forEach(function(element) {
+	    element.addEventListener('click', function() {
+	        var usuarioEditar = this.querySelector('.elements3Tabla').getAttribute('data-usuario');
+	        editarUsuario(usuarioEditar);
+	    });
+	});
+
+	function editarUsuario(usuarioEditar) {
+	    var xhr = new XMLHttpRequest();
+	    
+	    xhr.open("POST", "editarUsuario", true);
+	    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	    
+	    xhr.onreadystatechange = function() {
+	        if (xhr.readyState === XMLHttpRequest.DONE) {
+	            if (xhr.status === 200) {
+	                console.log("Usuario editado correctamente");
+	            } else {
+	                console.error("Error al editar usuario");
+	            }
+	        }
+	    };
+	    
+	    xhr.send("usuarioEditar=" + encodeURIComponent(usuario));
+	}
+	
+	function eliminarUsuario(usuario) {
+	    var xhr = new XMLHttpRequest();
+	    
+	    xhr.open("POST", "eliminarUsuario", true);
+	    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	    
+	    xhr.onreadystatechange = function() {
+	        if (xhr.readyState === XMLHttpRequest.DONE) {
+	            if (xhr.status === 200) {
+	                console.log("Usuario eliminado correctamente");
+	            } else {
+	                console.error("Error al eliminar usuario");
+	            }
+	        }
+	    };
+	    
+	    xhr.send("usuario=" + encodeURIComponent(usuario));
+	}
+
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    var error = getParameterByName('error');
+    var correcto = getParameterByName('correcto');
+    var nuevoParte = getParameterByName('nuevoParte');
+
+    if(correcto === 'true'){
+        document.getElementById('notiCorrecta').style.display = 'block';
+        document.getElementById('addMiembro').style.display = 'none';
+    }
+    
+    if(correcto === 'trueEliminado'){
+    	document.getElementById('notiCorrectaEliminacion').style.display = 'block';
+    	document.getElementById('addMiembro').style.display = 'none';
+    }
+
+    if(error === 'noCoinciden'){
+        document.getElementById('notiIncorrecta').style.display = 'block';
+        document.getElementById('addMiembro').style.display = 'none';
+    }
+
+    document.getElementById('quitarNotiIncorrecta').addEventListener('click', function(){
+        document.getElementById('notiIncorrecta').style.display = 'none';
+        document.getElementById('addMiembro').style.display = 'block';
+    });
+
+    document.getElementById('quitarNoti').addEventListener('click', function(){
+        document.getElementById('notiCorrecta').style.display = 'none';
+        document.getElementById('addMiembro').style.display = 'block';
+    });
+    
+    document.getElementById('quitarNotiEliminacion').addEventListener('click', function(){
+    	document.getElementById('notiCorrectaEliminacion').style.display = 'none';
+    	document.getElementById('addMiembro').style.display = 'block';
+    });
+
+    var dialog1 = document.getElementById("dialog1");
+    var dialog2 = document.getElementById("dialog2");
+
+    var mostrarPass = document.getElementById("mostrarPass");
+    var mostrarPass2 = document.getElementById("mostrarPass2");
+
+    document.getElementById('salirModal').addEventListener('click', function(){
+        dialog1.open = false;
+    });
+
+    document.getElementById('quitarModal').addEventListener('click', function(){
+        dialog1.open = false;
+    });
+
+    document.getElementById('salirModal2').addEventListener('click', function(){
+        dialog2.open = false;
+    });
+
+    document.getElementById('quitarModal2').addEventListener('click', function(){
+        dialog2.open = false;
+    });
+    
+    document.getElementById('salirModal3').addEventListener('click', function(){
+        dialog3.open = false;
+    });
+
+    document.getElementById('quitarModal3').addEventListener('click', function(){
+        dialog3.open = false;
+    });
+    
+    document.getElementById('abrirNuevoParte').addEventListener('click', function(){
+        dialog4.open = true;
+    });
+    
+    if(nuevoParte === 'true'){
+    	dialog4.open = true;
+    }
+    
+    document.getElementById('salirModal4').addEventListener('click', function(){
+        dialog4.open = false;
+    });
+
+    document.getElementById('quitarModal4').addEventListener('click', function(){
+        dialog4.open = false;
+    });
+    
+    document.getElementById('addMiembro').addEventListener('click', function(){
+        dialog2.open = true;
+    });
+
+    function cambiarVisibilidadPass(){
+        var passInput = document.getElementById('passInput');
+        if(passInput.type === "password"){
+            passInput.type = "text";
+        } else{
+            passInput.type = "password";
+        }
+    }
+
+    function cambiarVisibilidadConfirmPass(){
+        var confirmPassInput = document.getElementById('confirmPassInput');
+        if(confirmPassInput.type === "password"){
+            confirmPassInput.type = "text";
+        }else{
+            confirmPassInput.type = "password";
+        }
+    }
+
+    mostrarPass.addEventListener('click', cambiarVisibilidadPass);
+    mostrarPass2.addEventListener('click', cambiarVisibilidadConfirmPass);
+    
+    window.onload = function() {
+        var imprimeLista = document.getElementById("imprimeLista");
+        var listaRoles = document.getElementById("listaRoles");
+        var listaBotones = document.getElementById("listaBotones");
+
+        function cargarUsuarios() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        document.getElementById('listaUsuarios').innerHTML = xhr.responseText;
+                        document.querySelectorAll('.icon-button2Tabla').forEach(function(element) {
+                            element.addEventListener('click', function() {
+                                var usuario = this.querySelector('.elements4Tabla').getAttribute('data-usuario');
+                                document.getElementById('usuarioEliminar').value = usuario;
+                                document.getElementById('dialog1').open = true;
+                            });
+                        });
+                        document.querySelectorAll('.icon-buttonTabla').forEach(function(element) {
+                            element.addEventListener('click', function() {
+                                var usuarioEditar = this.querySelector('.elements3Tabla').getAttribute('data-usuario');
+                                document.getElementById('usuarioEditar').value = usuarioEditar;
+                                document.getElementById('dialog3').open = true;
+                            });
+                        });
+                    } else {
+                        console.error("Error al cargar la lista de usuarios.");
+                    }
+                }
+            };
+            xhr.open("GET", "listaUsuarios", true);
+            xhr.send();
+        }
+
+        function cargarListaRoles(){
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        listaRoles.innerHTML = xhr.responseText;
+                    } else {
+                        console.error("Error al cargar la lista de roles.");
+                    }
+                }
+            };
+            xhr.open("GET", "cargarListaRoles", true);
+            xhr.send();
+        }
+
+        function cargarRoles() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var roles = JSON.parse(xhr.responseText);
+                        var selectRol = document.querySelector("select[name='rol']");
+                        selectRol.innerHTML = "";
+                        roles.forEach(function(rol) {
+                            var option = document.createElement("option");
+                            option.text = rol;
+                            selectRol.add(option);
+                        });
+                    } else {
+                        console.error("Error al cargar la lista de roles.");
+                    }
+                }
+            };
+            xhr.open("GET", "listaRoles", true);
+            xhr.send();
+        }
+        
+        function cargarRoles2() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var roles = JSON.parse(xhr.responseText);
+                        var selectRol = document.querySelector("select[name='rolEditar']");
+                        selectRol.innerHTML = "";
+                        roles.forEach(function(rolEditar) {
+                            var option = document.createElement("option");
+                            option.text = rolEditar;
+                            selectRol.add(option);
+                        });
+                    } else {
+                        console.error("Error al cargar la lista de roles.");
+                    }
+                }
+            };
+            xhr.open("GET", "listaRoles", true);
+            xhr.send();
+        }
+        
+        function cargarRoles3() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var roles = JSON.parse(xhr.responseText);
+                        var selectRol = document.querySelector("select[name='rolFiltrar']");
+                        selectRol.innerHTML = "";
+                        roles.forEach(function(rolFiltrar) {
+                            var option = document.createElement("option");
+                            option.text = rolFiltrar;
+                            selectRol.add(option);
+                        });
+                    } else {
+                        console.error("Error al cargar la lista de roles.");
+                    }
+                }
+            };
+            xhr.open("GET", "listaRoles", true);
+            xhr.send();
+        }
+
+        cargarUsuarios();
+        cargarListaRoles();
+        cargarRoles();
+        cargarRoles2();
+        cargarRoles3();
+    };
+});
+	</script>
+</body>
+</html>

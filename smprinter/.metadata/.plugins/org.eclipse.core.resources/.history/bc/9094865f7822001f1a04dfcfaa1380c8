@@ -1,0 +1,106 @@
+import jakarta.servlet.*;
+import java.io.*;
+import java.sql.*;
+import jakarta.servlet.http.*;
+import jakarta.servlet.annotation.*;
+import org.apache.pdfbox.pdmodel.*;
+import org.apache.pdfbox.pdmodel.font.*;
+import org.apache.pdfbox.pdmodel.graphics.image.*;
+
+@WebServlet("/imprimeParte")
+public class imprimeParte extends HttpServlet {
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
+    
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	// Obtener el ID del parte de la solicitud
+        int parteId = Integer.parseInt(request.getParameter("id"));
+
+        try {
+            // Crear conexión a la base de datos
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/imprentadb", "root", "root");
+
+            // Consultar la base de datos para obtener los detalles del parte específico
+            String sql = "SELECT * FROM partes WHERE id=?";
+            PreparedStatement statement = conn.prepareStatement(sql);
+            statement.setInt(1, parteId);
+            ResultSet resultSet = statement.executeQuery();
+
+            // Crear documento PDF
+            PDDocument document = new PDDocument();
+            PDPage page = new PDPage();
+            document.addPage(page);
+            PDPageContentStream contentStream = new PDPageContentStream(document, page);
+
+            // Definir fuente y tamaño de texto
+            PDFont font = PDType0Font.load(document, document.getClass().getResourceAsStream("/org/apache/pdfbox/resources/ttf/LiberationSans-Regular.ttf"));
+            float fontSize = 12;
+
+            // Agregar contenido al PDF
+            float y = page.getMediaBox().getHeight() - 50; // Posición vertical inicial
+            
+            while (resultSet.next()) {
+                StringBuilder content = new StringBuilder();
+                content.append("ID: ").append(resultSet.getInt("id")).append("\n");
+                content.append("Cliente: ").append(resultSet.getString("cliente")).append("\n");
+                content.append("Tipo de cliente: ").append(resultSet.getString("tipoCliente")).append("\n");
+                content.append("Nombre del comercial: ").append(resultSet.getString("nombreComercial")).append("\n");
+                content.append("Fecha: ").append(resultSet.getString("fecha")).append("\n");
+                content.append("Fecha de entrega: ").append(resultSet.getString("fechaEntrega")).append("\n");
+                content.append("Ubicación: ").append(resultSet.getString("ubicacion")).append("\n");
+                content.append("Trabajo: ").append(resultSet.getString("trabajo")).append("\n");
+                content.append("Producto: ").append(resultSet.getString("producto")).append("\n");
+                content.append("Impresión: ").append(resultSet.getString("impresion")).append("\n");
+                content.append("Tintas: ").append(resultSet.getString("tintas")).append("\n");
+                content.append("Color de tinta: ").append(resultSet.getString("colorTinta")).append("\n");
+                content.append("Tamaño: ").append(resultSet.getString("tamanho")).append("\n");
+                content.append("Papel: ").append(resultSet.getString("papel")).append("\n");
+                content.append("Color del papel: ").append(resultSet.getString("colorPapel")).append("\n");
+                content.append("Opción sobre americano: ").append(resultSet.getString("americanoOpcion")).append("\n");
+                content.append("Cantidad: ").append(resultSet.getString("cantidad")).append("\n");
+                content.append("Formato de impresión: ").append(resultSet.getString("formatoImpresion")).append("\n");
+                content.append("Hojas: ").append(resultSet.getString("hojas")).append("\n");
+                content.append("Observaciones: ").append(resultSet.getString("observaciones")).append("\n");
+                content.append("Total: ").append(resultSet.getString("total")).append("\n");
+                content.append("Estado: ").append(resultSet.getString("estado")).append("\n");
+                
+                String[] lines = content.toString().split("\\n");
+
+                for (String line : lines) {
+                    contentStream.beginText();
+                    contentStream.setFont(font, fontSize);
+                    contentStream.newLineAtOffset(50, y);
+                    contentStream.showText(line);
+                    contentStream.endText();
+                    y -= 20; // Mover verticalmente para la siguiente línea
+                }
+            }
+
+            contentStream.close();
+
+            // Escribir el documento PDF en la respuesta HTTP
+            response.setContentType("application/pdf");
+            document.save(response.getOutputStream());
+            document.close();
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+}

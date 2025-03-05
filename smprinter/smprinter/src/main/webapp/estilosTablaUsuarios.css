@@ -1,0 +1,401 @@
+.table,
+.table * {
+  box-sizing: border-box;
+}
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-shrink: 0;
+  max-width: var(--layout-column-col12, 1376px);
+  position: relative;
+}
+.wrapperTabla {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.wrapperTablaUsuarios {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+.formularioUser{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 250px;
+}
+.first-colTabla {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.particles-table-headingTabla {
+  background: var(--solid-neutral-4, #f5f5f5);
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-end;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 44px;
+  position: relative;
+}
+.particles-checkboxTabla {
+  background: var(--solid-neutral-4, #f5f5f5);
+  border-style: solid;
+  border-color: var(--solid-neutral-80, #333333);
+  border-width: 0.8px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.particles-table-data-celTabla {
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 72px;
+  position: relative;
+}
+.particles-table-data-cel2Tabla {
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  min-height: 72px;
+  position: relative;
+}
+.colTabla {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: var(--layout-column-col1, 85px);
+  position: relative;
+}
+.particles-table-heading2Tabla {
+  background: var(--solid-neutral-4, #f5f5f5);
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 44px;
+  position: relative;
+}
+.input-textTabla {
+  color: var(--solid-neutral-56, #707070);
+  text-align: left;
+  font-family: var(
+    --headings-h4-font-family,
+    "IbmPlexSans-SemiBold",
+    sans-serif
+  );
+  font-size: var(--headings-h4-font-size, 12px);
+  line-height: var(--headings-h4-line-height, 20px);
+  letter-spacing: var(--headings-h4-letter-spacing, 0.03em);
+  font-weight: var(--headings-h4-font-weight, 600);
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.icons-arrow-up-down-sharpTabla {
+  flex-shrink: 0;
+  width: var(--icons-size-m, 16px);
+  height: var(--icons-size-m, 16px);
+  position: relative;
+  overflow: hidden;
+}
+.elementsTabla {
+	filter: invert(66%) sepia(0%) saturate(2594%) hue-rotate(343deg) brightness(113%) contrast(96%);
+  width: 66.67%;
+  height: 66.67%;
+  position: absolute;
+  right: 16.67%;
+  left: 16.67%;
+  bottom: 16.67%;
+  top: 16.67%;
+  overflow: visible;
+}
+.particles-table-data-cel3Tabla {
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 72px;
+  position: relative;
+}
+.input-text2Tabla {
+  color: var(--solid-neutral-80, #333333);
+  text-align: left;
+  font-family: var(
+    --paragraphs-s-font-family,
+    "IbmPlexSans-Regular",
+    sans-serif
+  );
+  font-size: var(--paragraphs-s-font-size, 16px);
+  line-height: var(--paragraphs-s-line-height, 24px);
+  font-weight: var(--paragraphs-s-font-weight, 400);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.col2Tabla {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  min-width: var(--layout-column-col1, 85px);
+  position: relative;
+}
+.particles-table-heading3Tabla {
+  background: #f5f5f5;
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-end;
+  align-self: stretch;
+  flex-shrink: 0;
+  height: 44px;
+  position: relative;
+}
+.input-text3Tabla {
+  color: #707070;
+  text-align: left;
+  font-family: "IbmPlexSans-SemiBold", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.elements2Tabla {
+	filter: invert(66%) sepia(0%) saturate(2594%) hue-rotate(343deg) brightness(113%) contrast(96%);
+  width: 66.67%;
+  height: 66.67%;
+  position: absolute;
+  right: 16.67%;
+  left: 16.67%;
+  bottom: 16.67%;
+  top: 16.67%;
+  overflow: visible;
+}
+.particles-table-data-cel4Tabla {
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 72px;
+  position: relative;
+}
+.input-text4Tabla {
+  color: #333333;
+  text-align: left;
+  font-family: "IbmPlexSans-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.particles-table-data-cel5Tabla {
+  padding: var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-self: stretch;
+  flex-shrink: 0;
+  min-height: 72px;
+  position: relative;
+}
+.tagTabla {
+  background: rgba(10, 10, 10, 0.08);
+  border-radius: var(--border-radius-m, 16px);
+  padding: var(--layout-padding-05, 4px) var(--layout-padding-x15, 12px)
+    var(--layout-padding-05, 4px) var(--layout-padding-x15, 12px);
+  display: flex;
+  flex-direction: row;
+  gap: var(--layout-gap-x1, 8px);
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.labelTabla {
+  color: #333333;
+  text-align: left;
+  font-family: "IbmPlexSans-Regular", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.col3Tabla {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+}
+.icon-buttonTabla {
+  background: #ffffff;
+  border-radius: var(--border-radius-m, 16px);
+  border-style: solid;
+  border-color: #1a6f70;
+  border-width: 0.8px;
+  padding: var(--layout-padding-x1, 8px);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.icons-editTabla {
+  flex-shrink: 0;
+  width: var(--icons-size-m, 16px);
+  height: var(--layout-padding-x2, 16px);
+  position: relative;
+  overflow: hidden;
+}
+.elements3Tabla {
+	filter: invert(37%) sepia(21%) saturate(1308%) hue-rotate(132deg) brightness(92%) contrast(93%);
+  width: 83.33%;
+  height: 83.33%;
+  position: absolute;
+  right: 8.33%;
+  left: 8.33%;
+  bottom: 8.33%;
+  top: 8.33%;
+  overflow: visible;
+}
+.icon-button2Tabla {
+  background: #ffffff;
+  border-radius: var(--border-radius-m, 16px);
+  border-style: solid;
+  border-color: #f30000;
+  border-width: 0.8px;
+  padding: var(--layout-padding-x1, 8px);
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.icons-delete-02Tabla {
+  flex-shrink: 0;
+  width: var(--icons-size-m, 16px);
+  height: var(--icons-size-m, 16px);
+  position: relative;
+  overflow: hidden;
+}
+.elements4Tabla {
+	filter: invert(38%) sepia(98%) saturate(7349%) hue-rotate(355deg) brightness(88%) contrast(119%);
+  width: 75%;
+  height: 83.33%;
+  position: absolute;
+  right: 12.5%;
+  left: 12.5%;
+  bottom: 8.33%;
+  top: 8.33%;
+  overflow: visible;
+}
+.elements5Tabla {
+	filter: invert(37%) sepia(21%) saturate(1308%) hue-rotate(132deg) brightness(92%) contrast(93%);
+  width: 83.33%;
+  height: 83.33%;
+  position: absolute;
+  right: 8.33%;
+  left: 8.33%;
+  bottom: 8.33%;
+  top: 8.33%;
+  overflow: visible;
+}
+.elements6Tabla {
+	filter: invert(38%) sepia(98%) saturate(7349%) hue-rotate(355deg) brightness(88%) contrast(119%);
+  width: 75%;
+  height: 83.33%;
+  position: absolute;
+  right: 12.5%;
+  left: 12.5%;
+  bottom: 8.33%;
+  top: 8.33%;
+  overflow: visible;
+}
