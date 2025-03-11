@@ -34,7 +34,6 @@
   position: relative;
 }
 .responsive-logotype {
-  background: #d6d6d6;
   display: flex;
   flex-direction: row;
   gap: 0px;
@@ -90,10 +89,11 @@
   height: var(--layout-padding-x1, 8px);
   position: relative;
 }
-hr.solid {
-  border-top: 3px solid #bbb;
-  display: flex;
-height: 0px;
+.solid {
+color: #d6d6d6;
+display: flex;
+height: 0.8px;
+width: 100%;
 justify-content: center;
 align-items: center;
 align-self: stretch;
@@ -113,6 +113,9 @@ align-self: stretch;
   height: 0px;
   position: relative;
   overflow: visible;
+}
+form {
+  width: 100%;
 }
 .input {
   display: flex;
@@ -143,8 +146,8 @@ align-self: stretch;
   border-style: solid;
   border-color: var(--solid-neutral-72, #474747);
   border-width: 0px 0px 0.8px 0px;
-  padding: var(--layout-gap-x1, 8px) var(--layout-padding-x1, 8px)
-    var(--layout-gap-x1, 8px) var(--layout-padding-x1, 8px);
+  padding: var(--layout-gap-x1, 8px) var(--layout-padding-x1, 8px);
+  gap: var(--layout-gap-x1, 8px);
   display: flex;
   flex-direction: row;
   gap: var(--layout-gap-x1, 8px);

@@ -11,7 +11,9 @@
 	<div class="inicio-de-sesi-n">
 	  <div class="body">
 	    <div class="col-4">
-	      <div class="responsive-logotype"></div>
+	      <div class="responsive-logotype">
+			<img src="img/Union.svg" alt="logotype">
+		  </div>
 	      <div class="wrapper">
 	        <div class="inicio-de-sesi-n2">Inicio de sesión</div>
 	        <div
@@ -20,10 +22,9 @@
 	          Para acceder a SM Printer Hub deberás iniciar sesión con las
 	          credenciales que la persona administradora te proporcionó.
 	        </div>
-	        <hr class="solid">
-	        <div class="spacing-block">
-	          <div class="spacer"></div>
-	        </div>
+	        <div class="spacing-block"></div>
+			<hr class="solid">
+			<div class="spacing-block"></div>
 	        <form action="gestionLogin" method="post">
 	        <div class="input">
 	          <div class="label">Cuenta</div>
@@ -38,7 +39,7 @@
 	        	Esta cuenta no existe. Revisa la ortografía y si el problema persiste contacta con la persona administradora.
 	        </div>
 	        <div class="input">
-	          <div class="label">Contraseña</div>
+	          <div class="label"><br>Contraseña</div>
 	          <div class="container" id="containerPass">
 	          	<input type="password" name="password" id="passInput" class="input-text" placeholder="Escribe aquí tu contraseña">
 	            <div class="particles-trailling-icon">
@@ -59,7 +60,7 @@
 	                <img class="elements2" src="img/pregunta.svg" />
 	              </div>
 	            </div>
-	            <div class="helper-text2" id="olvidaPass">¿Has olvidado la contraseña?</div>
+	            <div class="helper-text2" id="olvidaPass">¿Has olvidado la contraseña?<br><br></div>
 	          </div>
 	        </div>
 	        <div class="button">
@@ -68,7 +69,7 @@
 	            <img class="elements3" src="img/flechaDerecha.svg" />
 	          </div>
 	        </div>
-	        <div class="input">
+	        <div class="input"><br>
 	          <div class="container2">
 	            <div class="particles-checkbox"></div>
 	            <div class="input-text2">Recuérdame en este equipo</div>
@@ -86,7 +87,7 @@
 	      </div>
 	    </div>
 	    <div class="col-8">
-	      <img class="rectangle-14" src="img/login2.jpg" />
+	      <img class="rectangle-14" src="img/login2.jpg" width="100%"/>
 	    </div>
 	  </div>
 	  </div>
@@ -370,8 +371,10 @@
         function cambiarVisibilidadPass(){
         	if(passInput.type === "password"){
         		passInput.type = "text";
+				mostrarPass.src = "/img/elements.svg";
         	} else{
         		passInput.type = "password";
+				mostrarPass.src = "/img/ojo.svg";
         	}
         }
         
