@@ -434,4 +434,5 @@ dialog{
   top: 29.17%;
   transform: translate(-0.8px, -0.8px);
   overflow: visible;
+  filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(235deg) brightness(114%) contrast(101%);
 }

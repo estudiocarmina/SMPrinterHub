@@ -284,6 +284,18 @@ input[type=submit]{
   align-items: center;
   justify-content: flex-start;
 }
+.button:hover,
+.button:hover input {
+  background: var(--SOLID-Accent-48, #175F60);
+} 
+.button:focus-within
+{
+  background: var(--SOLID-Accent-56, #154F4F);
+  box-shadow: 0px 0px 0px 1.6px #1A6F70 inset, 0px 0px 0px 3.2px #FFF inset;
+}
+.button:focus-within input {
+  background: var(--SOLID-Accent-56, #154F4F);
+}
 .icons-arrow-right-02-sharp {
   flex-shrink: 0;
   width: var(--icon-size-m, 24px);
