@@ -75,7 +75,15 @@
 	            <div class="input-text2">Recuérdame en este equipo</div>
 	            <div class="particles-trailling-icon">
 	              <div class="icons-help-circle2">
-	                <img class="elements4" src="img/pregunta.svg" />
+	                <img class="elements4" src="img/pregunta.svg" onclick="MostrarAyuda()"/>
+					
+					<div class="particles-tooltip" style="visibility: hidden;">
+						<label class="label-tooltip">
+							Si desea que se recuerden tus credenciales la próxima vez que acceda al sitio web, marca el recuadro "Recuérdame en este equipo". 
+							Si no desea que se recuerden tus credenciales la próxima vez que acceda al sitio web, deje el recuadro "Recuérdame en este equipo" sin marcar.
+						</label>
+						<img src="img/shape.svg" class="shape-tooltip">
+					</div>
 	              </div>
 	            </div>
 	          </div>
@@ -371,10 +379,10 @@
         function cambiarVisibilidadPass(){
         	if(passInput.type === "password"){
         		passInput.type = "text";
-				mostrarPass.src = "/img/elements.svg";
+				mostrarPass.src = "img/elements.svg";
         	} else{
         		passInput.type = "password";
-				mostrarPass.src = "/img/ojo.svg";
+				mostrarPass.src = "img/ojo.svg";
         	}
         }
         
@@ -426,6 +434,17 @@
         salirBotonModal.addEventListener('click', function(){
         	dialog3.open = false;
         });
+
+		function MostrarAyuda() {
+			var div = document.getElementsByClassName("particles-tooltip")[0];
+
+			if (div.style.visibility == "hidden") {
+				div.style.visibility = "visible";
+			}
+			else {
+				div.style.visibility = "hidden";
+			}
+		}
     </script>
 </body>
 </html>

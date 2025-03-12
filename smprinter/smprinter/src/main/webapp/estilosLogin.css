@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 .inicio-de-sesi-n,
 .inicio-de-sesi-n * {
   box-sizing: border-box;
@@ -56,7 +58,7 @@
 .inicio-de-sesi-n2 {
   color: #0a0a0a;
   text-align: left;
-  font-family: var(--headings-h1-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--headings-h1-font-family, "IBM Plex Sans");
   font-size: var(--headings-h1-font-size, 32px);
   line-height: var(--headings-h1-line-height, 40px);
   font-weight: var(--headings-h1-font-weight, 500);
@@ -71,8 +73,7 @@
   text-align: left;
   font-family: var(
     --paragraphs-s-font-family,
-    "IbmPlexSans-Regular",
-    sans-serif
+    "IBM Plex Sans"
   );
   font-size: var(--paragraphs-s-font-size, 16px);
   line-height: var(--paragraphs-s-line-height, 24px);
@@ -130,7 +131,7 @@ form {
 .label {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: var(--inputs-xs-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--inputs-xs-font-family, "IBM Plex Sans");
   font-size: var(--inputs-xs-font-size, 12px);
   line-height: var(--inputs-xs-line-height, 20px);
   letter-spacing: var(--inputs-xs-letter-spacing, 0.03em);
@@ -160,7 +161,7 @@ form {
 .input-text {
   color: var(--solid-neutral-40, #999999);
   text-align: left;
-  font-family: var(--inputs-s-font-family, "IbmPlexSans-Regular", sans-serif);
+  font-family: var(--inputs-s-font-family, "IBM Plex Sans");
   font-size: var(--inputs-s-font-size, 16px);
   line-height: var(--inputs-s-line-height, 32px);
   font-weight: var(--inputs-s-font-weight, 400);
@@ -225,6 +226,35 @@ form {
   height: var(--icon-size-12, 12px);
   position: relative;
 }
+.particles-tooltip {
+  display: flex;
+  min-width: 48px;
+  max-width: 320px;
+  padding: var(--layout-padding-x-05, 4px) var(--Layout-Padding-x1, 8px);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: -250px;
+  bottom: -151px;
+  border-radius: 2px;
+  background: var(--SOLID-Neutral-96, #0A0A0A);
+}
+.label-tooltip {
+  flex: 1 0 0;
+  color: var(--SOLID-Neutral-0, #FFF);
+  font-family: "IBM Plex Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; 
+  letter-spacing: 0.36px;
+}
+.shape-tooltip {
+  position: absolute;
+  left: 3px;
+  top: -5px;
+}
 .elements2 {
   width: 83.33%;
   height: 83.33%;
@@ -238,7 +268,7 @@ form {
 .helper-text2 {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: "IbmPlexSans-Medium", sans-serif;
+  font-family: "IBM Plex Sans";
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.03em;
@@ -274,7 +304,7 @@ input[type=submit]{
 .button-text {
   color: var(--solid-neutral-0, #ffffff);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -341,7 +371,7 @@ align-items: center;
 .input-text2 {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: "IbmPlexSans-Medium", sans-serif;
+  font-family: "IBM Plex Sans";
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 0.03em;
@@ -404,7 +434,7 @@ align-items: center;
 .errorUser {
   color: var(--solid-secondary-red-40, #f30000);
   text-align: left;
-  font-family: var(--inputs-xs-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--inputs-xs-font-family, "IBM Plex Sans");
   font-size: var(--inputs-xs-font-size, 12px);
   line-height: var(--inputs-xs-line-height, 20px);
   letter-spacing: var(--inputs-xs-letter-spacing, 0.03em);
