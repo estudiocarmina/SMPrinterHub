@@ -478,7 +478,7 @@ a{
   padding: var(--layout-padding-x2, 16px);
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 0px;   
   align-items: flex-start;
   justify-content: flex-end;
   flex-shrink: 0;

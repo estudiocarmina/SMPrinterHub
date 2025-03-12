@@ -57,7 +57,7 @@
           <div class="button-text2">Mi cuenta</div>
         </div>
         <div class="button3">
-          <div class="button-text2">Cerrar sesión</div>
+          <div class="button-text2">Cerrar sesiÃ³n</div>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
           <div class="icons-file-01">
             <img class="elements7" src="img/papel.svg" />
           </div>
-          <div class="text2">Arrastra aquí para archivar el parte</div>
+          <div class="text2">Arrastra aquÃ­ para archivar el parte</div>
           <div class="button2">
             <div class="button-text4">Ver partes archivados</div>
           </div>
@@ -122,7 +122,7 @@
 		      <div class="button-textModal">Cancelar</div>
 		    </div>
 		    <div class="primary-buttonModal">
-		      <button type="submit" class="button-text2Modal">Añadir</button>
+		      <button type="submit" class="button-text2Modal">AÃ±adir</button>
 		      <div class="icons-add-01Modal">
 		        <img class="elements2Modal" src="img/sumar.svg" />
 		      </div>
@@ -218,18 +218,18 @@
                         console.log(xhr.responseText);
                         location.reload();
                     } else {
-                        console.error("Error al renombrar la agrupación. Estado: " + xhr.status);
+                        console.error("Error al renombrar la agrupaciÃ³n. Estado: " + xhr.status);
                     }
                 };
                 xhr.onerror = function() {
-                    console.error("Error de red al renombrar la agrupación");
+                    console.error("Error de red al renombrar la agrupaciÃ³n");
                 };
                 xhr.send("nuevoNombre=" + encodeURIComponent(nuevoNombre) + "&agrupacionId=" + encodeURIComponent(agrupacionId));
             });
         }
 
         function eliminarAgrupacion(element) {
-            var confirmacion = confirm("¿Estás seguro de que quieres eliminar esta agrupación?");
+            var confirmacion = confirm("Â¿EstÃ¡s seguro de que quieres eliminar esta agrupaciÃ³n?");
             if (confirmacion) {
                 var agrupacionId = element.closest('.empty-state3').dataset.id;
                 var xhr = new XMLHttpRequest();
@@ -239,7 +239,7 @@
                         var agrupacionElement = element.closest('.empty-state3');
                         agrupacionElement.parentNode.removeChild(agrupacionElement);
                     } else {
-                        console.error("Error al eliminar la agrupación");
+                        console.error("Error al eliminar la agrupaciÃ³n");
                     }
                 };
                 xhr.send();
@@ -317,7 +317,7 @@
                             event.preventDefault();
                             var parteId = event.dataTransfer.getData("text/plain");
                             var agrupacionId = agrupacionDiv.dataset.id;
-                            console.log("Parte ID: " + parteId + ", Agrupación ID: " + agrupacionId);
+                            console.log("Parte ID: " + parteId + ", AgrupaciÃ³n ID: " + agrupacionId);
                             moverParteAUbicacion(parteId, agrupacionId, event.clientX, event.clientY);
                         });
                         frame117Div.appendChild(agrupacionDiv);
@@ -347,7 +347,7 @@
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onload = function() {
                 if (xhr.status == 200) {
-                    console.log("Parte asociado con éxito");
+                    console.log("Parte asociado con Ã©xito");
                 } else {
                     console.log("Error al asociar parte. Estado: " + xhr.status + ", Respuesta: " + xhr.responseText);
                 }
