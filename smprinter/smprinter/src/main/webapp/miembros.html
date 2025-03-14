@@ -53,7 +53,9 @@
           <div class="spacer"></div>
         </div>
         <div class="button2">
-          <div class="button-text2">Mi cuenta</div>
+          <div class="button-text2">
+			<a href="miCuenta.html">Mi cuenta</a>
+		  </div>
         </div>
         <div class="button3">
           <div class="button-text2">Cerrar sesión</div>
@@ -223,6 +225,7 @@
 				    <div class="label-titleModal2">
 				      <div class="titleModal2">Añadir miembro</div>
 				    </div>
+					<div class="dividermodal2"></div>
 				  </div>
 				  <div class="icons-cancel-01Modal2">
 				    <img class="elementsModal2" id="quitarModal2" src="img/cruz.svg" />
@@ -234,7 +237,10 @@
 				          <div class="wrapperModal2">
 				            <div class="labelModal2">Rol</div>
 				            <div class="containerModal2">
-				              <select name="rol" id="rolInput" class="input-textModal2" placeholder="Selecciona el rol del miembro">
+				              <select name="rol" id="rolInput" class="input-textModal2" value="Selecciona">
+								<option value="texto" disabled selected>Selecciona el rol del miembro</option>|
+								<option value="prueba1">Prueba1</option>
+								<option value="prueba2">Prueba2</option>
 				              </select>
 				            </div>
 				          </div>
@@ -274,7 +280,7 @@
 				            <input type="password" name="confirmarPassword" id="confirmPassInput" class="input-textModal2" placeholder="Escribe aquí la contraseña">
 				            <div class="particles-trailling-icon2Modal2">
 				              <div class="icons-viewModal2" id="mostrarPass2">
-				                <img class="elements4Modal2" src="img/ojo.svg" />
+				                <img class="elements4Modal2" src="img/ojo.svg" id="prueba1" />
 				              </div>
 				            </div>
 				          </div>

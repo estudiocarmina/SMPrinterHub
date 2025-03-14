@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
 .mi-cuenta,
 .mi-cuenta * {
   box-sizing: border-box;
@@ -53,7 +55,7 @@
 .te-damos-la-bienvenida-a-sm-printer-hub {
   color: #0a0a0a;
   text-align: left;
-  font-family: var(--headings-h2-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--headings-h2-font-family, "IBM Plex Sans");
   font-size: var(--headings-h2-font-size, 24px);
   line-height: var(--headings-h2-line-height, 32px);
   font-weight: var(--headings-h2-font-weight, 500);
@@ -116,7 +118,7 @@
 .tab-title {
   color: var(--solid-neutral-56, #707070);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -197,7 +199,7 @@
 .button-text {
   color: var(--solid-neutral-0, #ffffff);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -279,7 +281,7 @@
 .button-text2 {
   color: var(--solid-accent-56, #154f4f);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -304,7 +306,7 @@
 .button-text3 {
   color: var(--solid-accent-40, #1a6f70);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -343,7 +345,7 @@
 .mi-cuenta2 {
   color: #0a0a0a;
   text-align: left;
-  font-family: var(--headings-h1-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--headings-h1-font-family, "IBM Plex Sans");
   font-size: var(--headings-h1-font-size, 32px);
   line-height: var(--headings-h1-line-height, 40px);
   font-weight: var(--headings-h1-font-weight, 500);
@@ -358,8 +360,7 @@
   text-align: left;
   font-family: var(
     --paragraphs-s-font-family,
-    "IbmPlexSans-Regular",
-    sans-serif
+    "IBM Plex Sans"
   );
   font-size: var(--paragraphs-s-font-size, 16px);
   line-height: var(--paragraphs-s-line-height, 24px);
@@ -402,7 +403,7 @@
 .label {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: var(--inputs-xs-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--inputs-xs-font-family, "IBM Plex Sans");
   font-size: var(--inputs-xs-font-size, 12px);
   line-height: var(--inputs-xs-line-height, 20px);
   letter-spacing: var(--inputs-xs-letter-spacing, 0.03em);
@@ -432,7 +433,7 @@
 .input-text {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: var(--inputs-s-font-family, "IbmPlexSans-Regular", sans-serif);
+  font-family: var(--inputs-s-font-family, "IBM Plex Sans");
   font-size: var(--inputs-s-font-size, 16px);
   line-height: var(--inputs-s-line-height, 32px);
   font-weight: var(--inputs-s-font-weight, 400);
@@ -458,7 +459,7 @@
 .input-text2 {
   color: var(--solid-neutral-56, #707070);
   text-align: left;
-  font-family: var(--inputs-s-font-family, "IbmPlexSans-Regular", sans-serif);
+  font-family: var(--inputs-s-font-family, "IBM Plex Sans");
   font-size: var(--inputs-s-font-size, 16px);
   line-height: var(--inputs-s-line-height, 32px);
   font-weight: var(--inputs-s-font-weight, 400);
@@ -552,7 +553,7 @@
 .button-text4 {
   color: var(--solid-secondary-red-40, #f30000);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -647,7 +648,7 @@
 .titleModal {
   color: var(--solid-neutral-96, #0a0a0a);
   text-align: left;
-  font-family: var(--headings-h2-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--headings-h2-font-family, "IBM Plex Sans");
   font-size: var(--headings-h2-font-size, 24px);
   line-height: var(--headings-h2-line-height, 32px);
   font-weight: var(--headings-h2-font-weight, 500);
@@ -728,7 +729,7 @@
 .labelModal {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: var(--inputs-xs-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--inputs-xs-font-family, "IBM Plex Sans");
   font-size: var(--inputs-xs-font-size, 12px);
   line-height: var(--inputs-xs-line-height, 20px);
   letter-spacing: var(--inputs-xs-letter-spacing, 0.03em);
@@ -758,7 +759,7 @@
 .input-textModal {
   color: var(--solid-neutral-80, #333333);
   text-align: left;
-  font-family: var(--inputs-s-font-family, "IbmPlexSans-Regular", sans-serif);
+  font-family: var(--inputs-s-font-family, "IBM Plex Sans");
   font-size: var(--inputs-s-font-size, 16px);
   line-height: var(--inputs-s-line-height, 32px);
   font-weight: var(--inputs-s-font-weight, 400);
@@ -834,7 +835,7 @@
 .button-textModal {
   color: var(--solid-accent-40, #1a6f70);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
@@ -860,7 +861,7 @@
 .button-text2Modal {
   color: var(--solid-neutral-0, #ffffff);
   text-align: left;
-  font-family: var(--buttons-s-font-family, "IbmPlexSans-Medium", sans-serif);
+  font-family: var(--buttons-s-font-family, "IBM Plex Sans");
   font-size: var(--buttons-s-font-size, 16px);
   line-height: var(--buttons-s-line-height, 24px);
   font-weight: var(--buttons-s-font-weight, 500);
